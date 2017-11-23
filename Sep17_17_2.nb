@@ -1,0 +1,3182 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    122029,       3174]
+NotebookOptionsPosition[    120557,       3123]
+NotebookOutlinePosition[    120911,       3139]
+CellTagsIndexPosition[    120868,       3136]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], " ", "\n", 
+   RowBox[{"<<", "Notation`"}], "\[IndentingNewLine]", 
+   RowBox[{"Off", "[", 
+    RowBox[{"Symbolize", "::", "bsymbexs"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["u", "\[Rho]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["u", "\[Phi]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["u", "\[Zeta]"]},
+      "NotationTemplateTag"], "]"}], ";"}], "\[IndentingNewLine]", " ", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalA]"]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalB]"]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalC]"]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalD]"]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalE]"]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["N", "\[GothicCapitalF]"]},
+      "NotationTemplateTag"], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["a", 
+        RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["a", 
+        RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["a", 
+        RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]]},
+      "NotationTemplateTag"], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["b", 
+        RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["b", 
+        RowBox[{"\[Phi]", ",", "\[GothicCapitalE]"}]]},
+      "NotationTemplateTag"], "]"}], ";", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["b", 
+        RowBox[{"\[Zeta]", ",", "\[GothicCapitalF]"}]]},
+      "NotationTemplateTag"], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["w", "\[Rho]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["w", "\[Phi]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SubscriptBox["w", "\[Zeta]"]},
+      "NotationTemplateTag"], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{OverscriptBox["L", "_"]},
+      "NotationTemplateTag"], "]"}], ";"}], "\[IndentingNewLine]", " ", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["g", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CoVarMetricCoeffs", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["g", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"ContraVarMetricCoeffs", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubsuperscriptBox["\[CapitalGamma]", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}], 
+          RowBox[{"k_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"\[CapitalGamma]", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_", ",", "k_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["u", 
+          RowBox[{"i_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"ContraVarDisp", "[", 
+           RowBox[{"[", "i_", "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["x", 
+          RowBox[{"i_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"Coords", "[", 
+           RowBox[{"[", "i_", "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["u", 
+          RowBox[{"i_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CoVarDispU", "[", 
+           RowBox[{"[", "i_", "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["w", 
+          RowBox[{"j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CoVarDispW", "[", 
+           RowBox[{"[", "j_", "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\n", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["u", 
+          RowBox[{"i_", "\[CenterDot]"}]], 
+         SubscriptBox["|", 
+          RowBox[{"j_", "\[CenterDot]"}]], " "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CovariantDU1", "[", 
+           RowBox[{"i_", ",", "j_"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["u", 
+          RowBox[{"i_", "\[CenterDot]"}]], 
+         SubscriptBox["|", 
+          RowBox[{"j_", "\[CenterDot]"}]], " "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CovariantDU2", "[", 
+           RowBox[{"i_", ",", "j_"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["w", 
+          RowBox[{"i_", "\[CenterDot]"}]], 
+         SubscriptBox["|", 
+          RowBox[{"j_", "\[CenterDot]"}]], " "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CovariantDW1", "[", 
+           RowBox[{"i_", ",", "j_"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["w", 
+          RowBox[{"i_", "\[CenterDot]"}]], 
+         SubscriptBox["|", 
+          RowBox[{"j_", "\[CenterDot]"}]], " "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"CovariantDW2", "[", 
+           RowBox[{"i_", ",", "j_"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["\[Gamma]", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"StrainCovariantU", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["\[Epsilon]", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"StrainCovariantW", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["\[DoubleStruckCapitalE]", 
+          RowBox[{
+           "i_", "\[CenterDot]", "j_", "\[CenterDot]", "k_", "\[CenterDot]", 
+            "l_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"StiffnessContra", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_", ",", "k_", ",", "l_"}], "]"}], "]"}]}]},
+      
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "u_"}], 
+          RowBox[{"\[PartialD]", "x_"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"D", "[", 
+           RowBox[{"u_", ",", "x_"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Notation", "[", 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SuperscriptBox["\[Tau]", 
+          RowBox[{"i_", "\[CenterDot]", "j_", "\[CenterDot]"}]], "  "}]},
+      "NotationTemplateTag"], " ", "\[DoubleLongLeftRightArrow]", " ", 
+     TemplateBox[{RowBox[{" ", 
+         RowBox[{"StressContra", "[", 
+           RowBox[{"[", 
+             RowBox[{"i_", ",", "j_"}], "]"}], "]"}]}]},
+      "NotationTemplateTag"]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"<<", "HaneeshPackages`"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PrntRls", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["u", "1"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "1"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["u", "2"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "2"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["u", "3"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "3"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["x", "1"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"x", ",", "1"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["x", "2"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"x", ",", "2"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["x", "3"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"x", ",", "3"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["u", "\[Rho]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"u", ",", "\[Rho]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["u", "\[Phi]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"u", ",", "\[Phi]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["u", "\[Zeta]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"u", ",", "\[Zeta]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["u", "\[Rho]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "\[Rho]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["u", "\[Phi]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "\[Phi]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalA]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalA]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalB]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalB]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalC]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalC]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalD]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalD]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalE]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalE]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SuperscriptBox["N", "\[GothicCapitalF]"], "\[Rule]", " ", 
+        RowBox[{"Superscript", "[", 
+         RowBox[{"N", ",", "\[GothicCapitalF]"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["a", 
+         RowBox[{"\[Rho]", ",", " ", "\[GothicCapitalA]"}]], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"a", ",", "\[Rho]", ",", "\[GothicCapitalA]"}], "]"}]}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["a", 
+         RowBox[{"\[Phi]", ",", " ", "\[GothicCapitalB]"}]], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"a", ",", "\[Phi]", ",", "\[GothicCapitalB]"}], "]"}]}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["a", 
+         RowBox[{"\[Zeta]", ",", " ", "\[GothicCapitalC]"}]], "\[Rule]", " ", 
+        
+        RowBox[{"Subscript", "[", 
+         RowBox[{"a", ",", "\[Zeta]", ",", "\[GothicCapitalC]"}], "]"}]}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["b", 
+         RowBox[{"\[Rho]", ",", " ", "\[GothicCapitalD]"}]], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"b", ",", "\[Rho]", ",", "\[GothicCapitalD]"}], "]"}]}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["b", 
+         RowBox[{"\[Phi]", ",", " ", "\[GothicCapitalE]"}]], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"b", ",", "\[Phi]", ",", "\[GothicCapitalE]"}], "]"}]}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["b", 
+         RowBox[{"\[Zeta]", ",", " ", "\[GothicCapitalF]"}]], "\[Rule]", " ", 
+        
+        RowBox[{"Subscript", "[", 
+         RowBox[{"b", ",", "\[Zeta]", ",", "\[GothicCapitalF]"}], "]"}]}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["u", "\[Zeta]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"u", ",", "\[Zeta]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["w", "\[Rho]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"w", ",", "\[Rho]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["w", "\[Phi]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"w", ",", "\[Phi]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["w", "\[Zeta]"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"w", ",", "\[Zeta]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        OverscriptBox["L", "_"], "\[Rule]", 
+        RowBox[{"Overscript", "[", 
+         RowBox[{"L", ",", "_"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["\[CapitalDelta]T", "0"], "\[Rule]", " ", 
+        RowBox[{"Subscript", "[", 
+         RowBox[{"\[CapitalDelta]T", ",", "0"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Pprint", "[", "expri_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"expr", "=", "expri"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"expr", "/.", "PrntRls"}], "//", "MatrixForm"}], "//", 
+        "pdConv"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7146682901740522`*^9, 3.714668357989232*^9}, 
+   3.7146683953876753`*^9, {3.7146685474783497`*^9, 3.7146685789901257`*^9}, {
+   3.714668643387423*^9, 3.714668712526799*^9}, {3.7146688037113*^9, 
+   3.714668836437004*^9}, {3.714669077521331*^9, 3.714669083417191*^9}, {
+   3.7146692209602623`*^9, 3.71466922152885*^9}, {3.714669403573353*^9, 
+   3.714669404326726*^9}, {3.7146694741405077`*^9, 3.714669498195528*^9}, 
+   3.7146695356837473`*^9, 3.714670226393153*^9, 3.714670388778947*^9, {
+   3.714670642441265*^9, 3.714670680448708*^9}, {3.714670980562999*^9, 
+   3.71467100121677*^9}, {3.7146712285472507`*^9, 3.7146712290740337`*^9}, 
+   3.7146726729422483`*^9, {3.714672819909686*^9, 3.714672912767016*^9}, {
+   3.714672948957596*^9, 3.714673015451799*^9}, 3.7146733987667627`*^9, {
+   3.714673575008103*^9, 3.7146735756885157`*^9}, {3.714674205453844*^9, 
+   3.714674218901084*^9}, {3.714675074204205*^9, 3.714675083124506*^9}, {
+   3.714677712543736*^9, 3.714677721526291*^9}, {3.71467775311098*^9, 
+   3.714677768086598*^9}, {3.7146781705982237`*^9, 3.714678180644094*^9}, {
+   3.7146783985728703`*^9, 3.71467842233226*^9}, 3.7146787482159967`*^9, {
+   3.71467910925994*^9, 3.7146791123797083`*^9}, 3.714683377803154*^9, {
+   3.714683418887083*^9, 3.714683448849516*^9}, 3.7146835683045464`*^9, {
+   3.714684522433181*^9, 3.714684542155897*^9}, {3.714685043489609*^9, 
+   3.714685137421673*^9}, {3.714685201791641*^9, 3.714685385101006*^9}, {
+   3.7146865998888397`*^9, 3.714686702573514*^9}, {3.7146867688511877`*^9, 
+   3.7146869518032703`*^9}, {3.71468974711684*^9, 3.7146897536729813`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"CoVarMetricCoeffs", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{
+        SuperscriptBox["\[Rho]", "2"], "+", 
+        SuperscriptBox[
+         OverscriptBox["L", "_"], "2"]}], ",", 
+       OverscriptBox["L", "_"]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       OverscriptBox["L", "_"], ",", "1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ContraVarMetricCoeffs", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        FractionBox["1", 
+         SuperscriptBox["\[Rho]", "2"]], ",", 
+        RowBox[{"-", 
+         FractionBox[
+          OverscriptBox["L", "_"], 
+          SuperscriptBox["\[Rho]", "2"]]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", 
+         FractionBox[
+          OverscriptBox["L", "_"], 
+          SuperscriptBox["\[Rho]", "2"]]}], ",", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[Rho]", "2"], "+", 
+          SuperscriptBox[
+           OverscriptBox["L", "_"], "2"]}], 
+         SuperscriptBox["\[Rho]", "2"]]}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "3"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalGamma]", "[", 
+    RowBox[{"[", 
+     RowBox[{";;", ",", ";;", ",", "1"}], "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "\[Rho]"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalGamma]", "[", 
+    RowBox[{"[", 
+     RowBox[{";;", ",", ";;", ",", "2"}], "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       FractionBox["1", "\[Rho]"], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox["1", "\[Rho]"], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalGamma]", "[", 
+    RowBox[{"[", 
+     RowBox[{";;", ",", ";;", ",", "3"}], "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", 
+        FractionBox[
+         OverscriptBox["L", "_"], "\[Rho]"]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         OverscriptBox["L", "_"], "\[Rho]"]}], ",", "0", ",", "0"}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    SubscriptBox["g", 
+     RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}], "//", 
+  "Pprint"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["g", 
+      RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}], "//", "Pprint"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
+   3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
+   3.714676116629897*^9}, {3.714676864974764*^9, 3.7146768683203373`*^9}, {
+   3.714677977623219*^9, 3.714677988373271*^9}, {3.7146780923952427`*^9, 
+   3.714678137506628*^9}, {3.714678803287148*^9, 3.714678806220405*^9}, 
+   3.714678870185774*^9, {3.714683300741435*^9, 3.714683336547274*^9}, {
+   3.71468340383563*^9, 3.714683426858253*^9}, {3.7146835259459267`*^9, 
+   3.714683540122635*^9}, {3.714684350259536*^9, 3.71468436210777*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"1", "0", "0"},
+      {"0", 
+       RowBox[{
+        SuperscriptBox[
+         OverscriptBox["L", "_"], "2"], "+", 
+        SuperscriptBox["\[Rho]", "2"]}], 
+       OverscriptBox["L", "_"]},
+      {"0", 
+       OverscriptBox["L", "_"], "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684563762711*^9, 3.714685356470149*^9, 
+  3.7146853941744957`*^9, 3.714686714864469*^9, 3.714687004575325*^9}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"1", "0", "0"},
+      {"0", 
+       FractionBox["1", 
+        SuperscriptBox["\[Rho]", "2"]], 
+       RowBox[{"-", 
+        FractionBox[
+         OverscriptBox["L", "_"], 
+         SuperscriptBox["\[Rho]", "2"]]}]},
+      {"0", 
+       RowBox[{"-", 
+        FractionBox[
+         OverscriptBox["L", "_"], 
+         SuperscriptBox["\[Rho]", "2"]]}], 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox[
+          OverscriptBox["L", "_"], "2"], "+", 
+         SuperscriptBox["\[Rho]", "2"]}], 
+        SuperscriptBox["\[Rho]", "2"]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684563762711*^9, 3.714685356470149*^9, 
+  3.7146853941744957`*^9, 3.714686714864469*^9, 3.714687004591072*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Coords", "=", 
+    RowBox[{"{", 
+     RowBox[{"\[Rho]", ",", "\[Phi]", ",", "\[Zeta]"}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"CoVarDispU", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["u", "\[Rho]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", 
+       RowBox[{
+        SubscriptBox["u", "\[Phi]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", " ", 
+       RowBox[{
+        SubscriptBox["u", "\[Zeta]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "}"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"CoVarDispW", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["w", "\[Rho]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", 
+       RowBox[{
+        SubscriptBox["w", "\[Phi]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", " ", 
+       RowBox[{
+        SubscriptBox["w", "\[Zeta]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoVarDispU", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", 
+       RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], 
+      RowBox[{
+       SuperscriptBox["N", "\[GothicCapitalA]"], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["a", 
+       RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], 
+      RowBox[{
+       SuperscriptBox["N", "\[GothicCapitalB]"], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["a", 
+       RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], 
+      RowBox[{
+       SuperscriptBox["N", "\[GothicCapitalC]"], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}]}], "}"}]}], ";", " ", 
+  RowBox[{"(", 
+   RowBox[{"(*", 
+    RowBox[{"Space", " ", "of", " ", "admissible", " ", "displacements"}], 
+    "*)"}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoVarDispW", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["b", 
+       RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+      RowBox[{
+       SuperscriptBox["N", "\[GothicCapitalD]"], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], ",", "0", ",", "0"}], 
+    "}"}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{"Space", " ", "of", " ", "admissible", " ", "variations"}], "*)"}],
+   "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["x", 
+      RowBox[{"i", "\[CenterDot]"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], "//", 
+   "Pprint"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    SubscriptBox["u", 
+     RowBox[{"i", "\[CenterDot]"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], "//", 
+  "Pprint"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    SubscriptBox["w", 
+     RowBox[{"i", "\[CenterDot]"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], "//", 
+  "Pprint"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
+   3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
+   3.714676116629897*^9}, {3.714676864974764*^9, 3.7146768683203373`*^9}, {
+   3.714677977623219*^9, 3.714677988373271*^9}, {3.7146780923952427`*^9, 
+   3.714678137506628*^9}, {3.714678803287148*^9, 3.714678806220405*^9}, 
+   3.714678870185774*^9, {3.714683300741435*^9, 3.714683336547274*^9}, {
+   3.71468340383563*^9, 3.714683426858253*^9}, {3.7146835259459267`*^9, 
+   3.714683540122635*^9}, 3.714684350259536*^9, {3.714684599926855*^9, 
+   3.714684607494957*^9}, 3.714684713321643*^9, {3.714684745881237*^9, 
+   3.714684757814789*^9}, {3.714684968383027*^9, 3.714685031079339*^9}, {
+   3.71468514777847*^9, 3.714685177032913*^9}, {3.7146854753060904`*^9, 
+   3.7146854774563093`*^9}, {3.714686542487632*^9, 3.714686591974395*^9}, {
+   3.7146870091647463`*^9, 3.714687041851837*^9}, {3.714687160554188*^9, 
+   3.714687162322318*^9}, {3.714687332635727*^9, 3.7146873347725067`*^9}, {
+   3.714687456656736*^9, 3.714687459497307*^9}, {3.7146886541490717`*^9, 
+   3.714688674661047*^9}, {3.714688721836075*^9, 3.714688722346908*^9}, {
+   3.714689376992961*^9, 3.714689389281456*^9}, {3.714689611853821*^9, 
+   3.714689629886002*^9}, {3.7146898367877274`*^9, 3.7146898625585537`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", 
+    TagBox[GridBox[{
+       {"\[Rho]"},
+       {"\[Phi]"},
+       {"\[Zeta]"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     Column], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684758874106*^9, 3.714685183303491*^9, 
+  3.714685227623169*^9, 3.7146853601899147`*^9, 3.714685396710289*^9, 
+  3.714685480918726*^9, 3.714686729300934*^9, 3.7146870437640657`*^9, 
+  3.714687173812765*^9, 3.714687336197991*^9, 3.714687461200465*^9, 
+  3.714688685083156*^9, 3.7146887232367887`*^9, 3.71468939203179*^9, 
+  3.7146896334369707`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", 
+    TagBox[GridBox[{
+       {
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalA]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]},
+       {
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalB]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]},
+       {
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalC]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     Column], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684758874106*^9, 3.714685183303491*^9, 
+  3.714685227623169*^9, 3.7146853601899147`*^9, 3.714685396710289*^9, 
+  3.714685480918726*^9, 3.714686729300934*^9, 3.7146870437640657`*^9, 
+  3.714687173812765*^9, 3.714687336197991*^9, 3.714687461200465*^9, 
+  3.714688685083156*^9, 3.7146887232367887`*^9, 3.71468939203179*^9, 
+  3.714689633454896*^9}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", 
+    TagBox[GridBox[{
+       {
+        RowBox[{
+         SubscriptBox["b", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalD]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     Column], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684758874106*^9, 3.714685183303491*^9, 
+  3.714685227623169*^9, 3.7146853601899147`*^9, 3.714685396710289*^9, 
+  3.714685480918726*^9, 3.714686729300934*^9, 3.7146870437640657`*^9, 
+  3.714687173812765*^9, 3.714687336197991*^9, 3.714687461200465*^9, 
+  3.714688685083156*^9, 3.7146887232367887`*^9, 3.71468939203179*^9, 
+  3.714689633469263*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"CovariantDU2", "[", 
+       RowBox[{"i_", ",", "j_"}], "]"}], ":=", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          SubscriptBox["u", 
+           RowBox[{"i", "\[CenterDot]"}]]}], 
+         RowBox[{"\[PartialD]", 
+          SuperscriptBox["x", 
+           RowBox[{"j", "\[CenterDot]"}]]}]], "-", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"k", "=", "1"}], "3"], 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["u", 
+            RowBox[{"k", "\[CenterDot]"}]], 
+           SubsuperscriptBox["\[CapitalGamma]", 
+            RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}], 
+            RowBox[{"k", "\[CenterDot]"}]]}], ")"}]}]}], ")"}]}], ";"}],
+    FontWeight->"Bold"], 
+   StyleBox["\[IndentingNewLine]",
+    FontWeight->"Bold"], 
+   RowBox[{
+    RowBox[{"StrainCovariantU", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["u", 
+             RowBox[{"i", "\[CenterDot]"}]], 
+            SubscriptBox["|", 
+             RowBox[{"j", "\[CenterDot]"}]]}], ")"}], "+", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["u", 
+             RowBox[{"j", "\[CenterDot]"}]], 
+            SubscriptBox["|", 
+             RowBox[{"i", "\[CenterDot]"}]]}], ")"}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Flatten", "@", 
+     RowBox[{"FullSimplify", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        SubscriptBox["\[Gamma]", 
+         RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], "//", 
+    "Pprint"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
+   3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
+   3.714676116629897*^9}, {3.714676864974764*^9, 3.7146768683203373`*^9}, {
+   3.714677977623219*^9, 3.714677988373271*^9}, {3.7146780923952427`*^9, 
+   3.714678137506628*^9}, {3.714678803287148*^9, 3.714678806220405*^9}, 
+   3.714678870185774*^9, {3.714683300741435*^9, 3.714683336547274*^9}, {
+   3.71468340383563*^9, 3.714683426858253*^9}, {3.7146835259459267`*^9, 
+   3.714683540122635*^9}, 3.714684350259536*^9, {3.714684599926855*^9, 
+   3.714684607494957*^9}, 3.714684713321643*^9, {3.714684745881237*^9, 
+   3.714684771966007*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", 
+    TagBox[GridBox[{
+       {
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalA]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Rho]"}],
+          MultilineFunction->None]}]},
+       {
+        FractionBox[
+         RowBox[{
+          RowBox[{"2", " ", 
+           OverscriptBox["L", "_"], " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalC]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalB]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+          RowBox[{"\[Rho]", " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalB]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Rho]"}],
+            MultilineFunction->None]}]}], 
+         RowBox[{"2", " ", "\[Rho]"}]]},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalA]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}], "+", 
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalC]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Rho]"}],
+             MultilineFunction->None]}]}], ")"}]}]},
+       {
+        FractionBox[
+         RowBox[{
+          RowBox[{"2", " ", 
+           OverscriptBox["L", "_"], " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalC]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+          RowBox[{"2", " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalB]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+          RowBox[{"\[Rho]", " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalB]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Rho]"}],
+            MultilineFunction->None]}]}], 
+         RowBox[{"2", " ", "\[Rho]"}]]},
+       {
+        RowBox[{"\[Rho]", " ", 
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalA]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalB]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Zeta]"}],
+          MultilineFunction->None]}]},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalA]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}], "+", 
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalC]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Rho]"}],
+             MultilineFunction->None]}]}], ")"}]}]},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalB]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Zeta]"}],
+          MultilineFunction->None]}]},
+       {
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalC]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Zeta]"}],
+          MultilineFunction->None]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     Column], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.714684772963608*^9, 3.714685415238489*^9, 
+  3.714685484615028*^9, 3.714686738876472*^9, 3.714687056725465*^9, 
+  3.714687177148489*^9, 3.714687339258725*^9, 3.714687463619515*^9, 
+  3.7146886899027777`*^9, 3.714689395209309*^9, 3.714689637118576*^9}]
+}, Open  ]],
+
+Cell[TextData[StyleBox["",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.71468981712215*^9, 3.7146898334511423`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\[IndentingNewLine]",
+   FontWeight->"Bold"], 
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"CovariantDW2", "[", 
+       RowBox[{"i_", ",", "j_"}], "]"}], ":=", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[PartialD]", 
+          SubscriptBox["w", 
+           RowBox[{"i", "\[CenterDot]"}]]}], 
+         RowBox[{"\[PartialD]", 
+          SuperscriptBox["x", 
+           RowBox[{"j", "\[CenterDot]"}]]}]], "-", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"k", "=", "1"}], "3"], 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["w", 
+            RowBox[{"k", "\[CenterDot]"}]], 
+           SubsuperscriptBox["\[CapitalGamma]", 
+            RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}], 
+            RowBox[{"k", "\[CenterDot]"}]]}], ")"}]}]}], ")"}]}], ";"}],
+    FontWeight->"Bold"], 
+   StyleBox["\[IndentingNewLine]",
+    FontWeight->"Bold"], 
+   RowBox[{
+    RowBox[{"StrainCovariantW", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["w", 
+             RowBox[{"i", "\[CenterDot]"}]], 
+            SubscriptBox["|", 
+             RowBox[{"j", "\[CenterDot]"}]]}], ")"}], "+", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["w", 
+             RowBox[{"j", "\[CenterDot]"}]], 
+            SubscriptBox["|", 
+             RowBox[{"i", "\[CenterDot]"}]]}], ")"}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Flatten", "@", 
+     RowBox[{"FullSimplify", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        SubscriptBox["\[Epsilon]", 
+         RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], "//", 
+    "Pprint"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{
+  3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
+   3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
+   3.714676116629897*^9}, {3.714676864974764*^9, 3.7146768683203373`*^9}, {
+   3.714677977623219*^9, 3.714677988373271*^9}, {3.7146780923952427`*^9, 
+   3.714678137506628*^9}, {3.714678803287148*^9, 3.714678806220405*^9}, 
+   3.714678870185774*^9, {3.714683300741435*^9, 3.714683336547274*^9}, {
+   3.71468340383563*^9, 3.714683426858253*^9}, {3.7146835259459267`*^9, 
+   3.714683540122635*^9}, 3.714684350259536*^9, {3.714684599926855*^9, 
+   3.714684607494957*^9}, 3.7146846892353067`*^9, {3.714684719305612*^9, 
+   3.7146847201777*^9}, {3.714684778654001*^9, 3.714684783861169*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", 
+    TagBox[GridBox[{
+       {
+        RowBox[{
+         SubscriptBox["b", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalD]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Rho]"}],
+          MultilineFunction->None]}]},
+       {"0"},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SubscriptBox["b", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalD]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Zeta]"}],
+          MultilineFunction->None]}]},
+       {"0"},
+       {
+        RowBox[{"\[Rho]", " ", 
+         SubscriptBox["b", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalD]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]},
+       {"0"},
+       {
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SubscriptBox["b", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalD]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+          RowBox[{"\[PartialD]", "\[Zeta]"}],
+          MultilineFunction->None]}]},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     Column], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.71468478509415*^9, 3.7146854322049227`*^9, 
+  3.714685493633322*^9, 3.7146867455285*^9, 3.714687190372381*^9, 
+  3.7146873416990557`*^9, 3.714687465935421*^9, 3.7146886942763433`*^9, 
+  3.7146887264997396`*^9, 3.7146894000610323`*^9, 3.714689639529758*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StiffnessContra", "=", 
+   RowBox[{"\[Mu]", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["g", 
+         RowBox[{"i", "\[CenterDot]", "r", "\[CenterDot]"}]], " ", 
+        SuperscriptBox["g", 
+         RowBox[{"j", "\[CenterDot]", "s", "\[CenterDot]"}]]}], "+", 
+       RowBox[{
+        SuperscriptBox["g", 
+         RowBox[{"i", "\[CenterDot]", "s", "\[CenterDot]"}]], " ", 
+        SuperscriptBox["g", 
+         RowBox[{"j", "\[CenterDot]", "r", "\[CenterDot]"}]]}], "+", 
+       RowBox[{
+        FractionBox["\[Lambda]", "\[Mu]"], 
+        SuperscriptBox["g", 
+         RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], 
+        SuperscriptBox["g", 
+         RowBox[{"r", "\[CenterDot]", "s", "\[CenterDot]"}]]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "1", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "1", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"s", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.714676397578353*^9, 3.71467641637295*^9}, {
+   3.714676979882523*^9, 3.714676996412098*^9}, 3.714683438522211*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StressContra", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"r", "=", "1"}], "3"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"s", "=", "1"}], "3"], 
+       RowBox[{
+        SuperscriptBox["\[DoubleStruckCapitalE]", 
+         RowBox[{
+         "i", "\[CenterDot]", "j", "\[CenterDot]", "r", "\[CenterDot]", "s", 
+          "\[CenterDot]"}]], 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["\[Gamma]", 
+           RowBox[{"r", "\[CenterDot]", "s", "\[CenterDot]"}]], "-", 
+          RowBox[{"\[Alpha]\[CapitalDelta]T", " ", 
+           SubscriptBox["g", 
+            RowBox[{"r", "\[CenterDot]", "s", "\[CenterDot]"}]]}]}], 
+         ")"}]}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.714676419309455*^9, 3.7146765152243156`*^9}, 
+   3.714676772952157*^9, {3.71468613032321*^9, 3.714686156134083*^9}, {
+   3.714686194691167*^9, 3.714686201543836*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"W", "=", 
+  RowBox[{"FullSimplify", "@", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[Tau]", 
+       RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], 
+      SubscriptBox["\[Epsilon]", 
+       RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.714679648847405*^9, 3.714679734435253*^9}, {
+  3.71467978998274*^9, 3.714679794389016*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   SuperscriptBox["\[Rho]", "3"]], 
+  RowBox[{
+   SubscriptBox["b", 
+    RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["N", "\[GothicCapitalD]"], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "\[Alpha]\[CapitalDelta]T"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "\[Lambda]"}], "+", 
+           RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+         SuperscriptBox["\[Rho]", "2"]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Lambda]", "+", 
+           RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", "\[Rho]", " ", 
+         RowBox[{
+          SuperscriptBox["N", "\[GothicCapitalA]"], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "-", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         OverscriptBox["L", "_"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Lambda]", "+", 
+           RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalB]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "1"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[Lambda]", "+", 
+              RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}], "+", 
+           RowBox[{"\[Lambda]", " ", 
+            SuperscriptBox["\[Rho]", "2"]}]}], ")"}], " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalC]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "1"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", "\[Lambda]", 
+         " ", 
+         SuperscriptBox["\[Rho]", "2"], " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalA]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"1", ",", "0"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}]}], ")"}]}], "+", 
+     RowBox[{"\[Mu]", " ", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         SuperscriptBox["N", "\[GothicCapitalD]"], ")"}], 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"0", ",", "1"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         OverscriptBox["L", "_"], " ", 
+         RowBox[{
+          SuperscriptBox["N", "\[GothicCapitalB]"], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["a", 
+          RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+         SuperscriptBox[
+          OverscriptBox["L", "_"], "2"], " ", 
+         RowBox[{
+          SuperscriptBox["N", "\[GothicCapitalC]"], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+        RowBox[{"\[Rho]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], "+", 
+              SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               SuperscriptBox["N", "\[GothicCapitalA]"], ")"}], 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"0", ",", "1"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "-", 
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+            OverscriptBox["L", "_"], " ", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               SuperscriptBox["N", "\[GothicCapitalB]"], ")"}], 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"1", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+           RowBox[{
+            SubscriptBox["a", 
+             RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], "+", 
+              SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               SuperscriptBox["N", "\[GothicCapitalC]"], ")"}], 
+              TagBox[
+               RowBox[{"(", 
+                RowBox[{"1", ",", "0"}], ")"}],
+               Derivative],
+              MultilineFunction->None], "[", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}]}], ")"}]}]}], 
+       ")"}]}], "+", 
+     RowBox[{"\[Rho]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "\[Alpha]\[CapitalDelta]T"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "\[Lambda]"}], "+", 
+           RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+         SuperscriptBox["\[Rho]", "2"]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", "\[Lambda]", 
+         " ", "\[Rho]", " ", 
+         RowBox[{
+          SuperscriptBox["N", "\[GothicCapitalA]"], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "-", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+         OverscriptBox["L", "_"], " ", "\[Lambda]", " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalB]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "1"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", "\[Lambda]", 
+         " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            OverscriptBox["L", "_"], "2"], "+", 
+           SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalC]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "1"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "+", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Lambda]", "+", 
+           RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+         SuperscriptBox["\[Rho]", "2"], " ", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["N", "\[GothicCapitalA]"], ")"}], 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"1", ",", "0"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}]}], ")"}], " ", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         SuperscriptBox["N", "\[GothicCapitalD]"], ")"}], 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{{3.714679655143297*^9, 3.714679663173761*^9}, {
+   3.7146796961402893`*^9, 3.714679735008677*^9}, {3.714679765961281*^9, 
+   3.714679795507835*^9}, 3.7146848257900333`*^9, 3.714685446310121*^9, 
+   3.714685504923657*^9, 3.7146862163588533`*^9, 3.714687207059901*^9, 
+   3.7146873532243*^9, 3.7146874739588537`*^9, 3.7146887409395647`*^9, 
+   3.714689410426907*^9, 3.714689652806859*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FullSimplify", "[", "W", "]"}], "//", 
+  "Pprint"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Simplify", "[", 
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"W", " ", 
+           SuperscriptBox["\[Rho]", "3"]}], ",", 
+          SubscriptBox["a", 
+           RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], ",", 
+          SubscriptBox["b", 
+           RowBox[{"\[Zeta]", ",", "\[GothicCapitalF]"}]]}], "]"}], "]"}], "//", 
+       RowBox[{"Pprint", "\[IndentingNewLine]", 
+        RowBox[{"Simplify", "[", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"W", " ", 
+            SuperscriptBox["\[Rho]", "3"]}], ",", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], ",", 
+           SubscriptBox["b", 
+            RowBox[{"\[Zeta]", ",", "\[GothicCapitalF]"}]]}], "]"}], 
+         "]"}]}]}], "//", 
+      RowBox[{"Pprint", "\[IndentingNewLine]", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"W", " ", 
+           SuperscriptBox["\[Rho]", "3"]}], ",", 
+          SubscriptBox["a", 
+           RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], ",", 
+          SubscriptBox["b", 
+           RowBox[{"\[Zeta]", ",", "\[GothicCapitalF]"}]]}], "]"}], "]"}]}]}],
+      "//", 
+     RowBox[{"Pprint", "\[IndentingNewLine]", 
+      RowBox[{"Simplify", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"W", " ", 
+           SuperscriptBox["\[Rho]", "3"]}], "/.", 
+          RowBox[{
+           SubscriptBox["a", 
+            RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], "\[Rule]", 
+           "0"}]}], "/.", 
+         RowBox[{
+          SubscriptBox["a", 
+           RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], "\[Rule]", "0"}]}], 
+        "/.", 
+        RowBox[{
+         SubscriptBox["a", 
+          RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], "\[Rule]", "0"}]}], 
+       "]"}]}]}], "//", "Pprint"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.714683218567567*^9, 3.714683231409988*^9}, {
+  3.714689593437842*^9, 3.714689598905712*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["\[Rho]", "3"]}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["b", 
+         RowBox[{"\[Rho]", ",", "\[GothicCapitalE]"}]], " ", 
+        RowBox[{
+         TemplateBox[{"N","\[GothicCapitalE]"},
+          "Superscript"], "\[InvisibleApplication]", 
+         RowBox[{"(", 
+          RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           OverscriptBox["L", "_"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Lambda]", "+", 
+             RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalB]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Zeta]"}],
+            MultilineFunction->None]}], "-", 
+          RowBox[{
+           SubscriptBox["a", 
+            RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"\[Lambda]", "+", 
+                RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}], "+", 
+             RowBox[{"\[Lambda]", " ", 
+              SuperscriptBox["\[Rho]", "2"]}]}], ")"}], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalC]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Zeta]"}],
+            MultilineFunction->None]}], "-", 
+          RowBox[{"\[Rho]", " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Lambda]", "+", 
+             RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalA]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+          RowBox[{"\[Lambda]", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           SubscriptBox["a", 
+            RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalA]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Rho]"}],
+            MultilineFunction->None]}], "+", 
+          RowBox[{"\[Alpha]\[CapitalDelta]T", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"3", " ", "\[Lambda]"}], "+", 
+             RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}]}], ")"}]}]}], "-", 
+      RowBox[{"2", " ", "\[Rho]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["b", 
+           RowBox[{"\[Rho]", ",", "\[GothicCapitalE]"}]], " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalE]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+           RowBox[{"\[PartialD]", "\[Rho]"}],
+           MultilineFunction->None]}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            SubscriptBox["b", 
+             RowBox[{"\[Rho]", ",", "\[GothicCapitalE]"}]]}], 
+           RowBox[{"\[PartialD]", "\[Rho]"}],
+           MultilineFunction->None], " ", 
+          RowBox[{
+           TemplateBox[{"N","\[GothicCapitalE]"},
+            "Superscript"], "\[InvisibleApplication]", 
+           RowBox[{"(", 
+            RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Lambda]", " ", 
+          OverscriptBox["L", "_"], " ", 
+          SubscriptBox["a", 
+           RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalB]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+           RowBox[{"\[PartialD]", "\[Zeta]"}],
+           MultilineFunction->None]}], "-", 
+         RowBox[{"\[Lambda]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], "+", 
+            SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+          SubscriptBox["a", 
+           RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalC]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+           RowBox[{"\[PartialD]", "\[Zeta]"}],
+           MultilineFunction->None]}], "-", 
+         RowBox[{
+          SuperscriptBox["\[Rho]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Lambda]", "+", 
+            RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+          SubscriptBox["a", 
+           RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalA]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+           RowBox[{"\[PartialD]", "\[Rho]"}],
+           MultilineFunction->None]}], "-", 
+         RowBox[{"\[Lambda]", " ", "\[Rho]", " ", 
+          SubscriptBox["a", 
+           RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+          RowBox[{
+           TemplateBox[{"N","\[GothicCapitalA]"},
+            "Superscript"], "\[InvisibleApplication]", 
+           RowBox[{"(", 
+            RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+         RowBox[{"\[Alpha]\[CapitalDelta]T", " ", 
+          SuperscriptBox["\[Rho]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\[Lambda]"}], "+", 
+            RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{"2", " ", "\[Mu]", " ", 
+       SubscriptBox["b", 
+        RowBox[{"\[Rho]", ",", "\[GothicCapitalE]"}]], " ", 
+       FractionBox[
+        RowBox[{"\[PartialD]", 
+         RowBox[{
+          TemplateBox[{"N","\[GothicCapitalE]"},
+           "Superscript"], "\[InvisibleApplication]", 
+          RowBox[{"(", 
+           RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+        RowBox[{"\[PartialD]", "\[Zeta]"}],
+        MultilineFunction->None], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Rho]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], "+", 
+            SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["a", 
+              RowBox[{"\[Rho]", ",", "\[GothicCapitalA]"}]], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalA]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Zeta]"}],
+              MultilineFunction->None]}], "+", 
+            RowBox[{
+             SubscriptBox["a", 
+              RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalC]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Rho]"}],
+              MultilineFunction->None]}]}], ")"}]}], "-", 
+         RowBox[{
+          OverscriptBox["L", "_"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", 
+             OverscriptBox["L", "_"], " ", 
+             SubscriptBox["a", 
+              RowBox[{"\[Zeta]", ",", "\[GothicCapitalC]"}]], " ", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalC]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+            RowBox[{"2", " ", 
+             SubscriptBox["a", 
+              RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalB]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+            RowBox[{"\[Rho]", " ", 
+             SubscriptBox["a", 
+              RowBox[{"\[Phi]", ",", "\[GothicCapitalB]"}]], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Rho]"}],
+              MultilineFunction->None]}]}], ")"}]}]}], ")"}]}]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.714683222158558*^9, 3.7146832326882772`*^9}, 
+   3.714687221700873*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Global Stiffness Matrix and Force Vector\nK U =F\n\[GothicCapitalA]\
+\[Element]{1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}, \[GothicCapitalB]={ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "+1, 2 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}, \[GothicCapitalB]={ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    SubscriptBox["N", "nodes"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "+1, 3 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}\n\[GothicCapitalD]\[Element]{1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}, \[GothicCapitalE]={ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "+1, 2 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}, \[GothicCapitalF]={ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", 
+    SubscriptBox["N", "nodes"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "+1, 3 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "nodes"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "}\n "
+}], "Subsection",
+ CellChangeTimes->{{3.714689255883521*^9, 3.714689365433344*^9}, {
+  3.714690293574092*^9, 3.714690302414463*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[GridBox[{
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalD]", ",", " ", "\[GothicCapitalA]"}]], GridBox[{
+        {
+         RowBox[{"=", 
+          RowBox[{
+           SubscriptBox["\[Integral]", "\[CapitalOmega]"], " ", 
+           TagBox[
+            RowBox[{"\[Rho]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[Mu]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox[
+                   OverscriptBox["L", "_"], "2"], "+", 
+                  SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  RowBox[{
+                   TemplateBox[{"N","\[GothicCapitalA]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                 RowBox[{"\[PartialD]", "\[Zeta]"}],
+                 MultilineFunction->None], " ", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  RowBox[{
+                   TemplateBox[{"N","\[GothicCapitalD]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                 RowBox[{"\[PartialD]", "\[Zeta]"}],
+                 MultilineFunction->None]}], "+", 
+               RowBox[{"\[Rho]", " ", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  RowBox[{
+                   TemplateBox[{"N","\[GothicCapitalA]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                 RowBox[{"\[PartialD]", "\[Rho]"}],
+                 MultilineFunction->None], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"\[Rho]", " ", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Lambda]", "+", 
+                    RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+                   FractionBox[
+                    RowBox[{"\[PartialD]", 
+                    RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalD]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                    RowBox[{"\[PartialD]", "\[Rho]"}],
+                    MultilineFunction->None]}], "+", 
+                  RowBox[{"\[Lambda]", " ", 
+                   RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalD]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}], ")"}]}], 
+               "+", 
+               RowBox[{
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalA]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"\[Lambda]", "+", 
+                    RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+                   RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalD]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+                  RowBox[{"\[Lambda]", " ", "\[Rho]", " ", 
+                   FractionBox[
+                    RowBox[{"\[PartialD]", 
+                    RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalD]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                    RowBox[{"\[PartialD]", "\[Rho]"}],
+                    MultilineFunction->None]}]}], ")"}]}]}], ")"}]}],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]}]}]}
+       },
+       GridBoxAlignment->{"Columns" -> {{"="}}}], " ", 
+      FractionBox["d\[CapitalOmega]", 
+       SuperscriptBox["\[Rho]", "3"]]}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalD]", ",", " ", "\[GothicCapitalB]"}]], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       TagBox[
+        RowBox[{
+         OverscriptBox["L", "_"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Lambda]", "+", 
+               RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalD]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Zeta]"}],
+              MultilineFunction->None]}]}], "-", 
+           RowBox[{"\[Lambda]", " ", "\[Rho]", " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalB]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalD]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Rho]"}],
+             MultilineFunction->None]}], "+", 
+           RowBox[{"\[Mu]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalB]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalD]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}]}], ")"}], "  ", 
+         FractionBox["d\[CapitalOmega]", 
+          SuperscriptBox["\[Rho]", "3"]]}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]]}]}]},
+    {
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["K", 
+        RowBox[{"\[GothicCapitalD]", ",", " ", "\[GothicCapitalC]"}]], "=", 
+       RowBox[{
+        SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           RowBox[{"\[Rho]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], "+", 
+              SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[Lambda]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalC]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Zeta]"}],
+                MultilineFunction->None], " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalD]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}], "+", 
+              RowBox[{"\[Mu]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalC]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None], " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalD]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Zeta]"}],
+                MultilineFunction->None]}]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["L", "_"], "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Lambda]", "+", 
+                 RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}], "+", 
+              RowBox[{"\[Lambda]", " ", 
+               SuperscriptBox["\[Rho]", "2"]}]}], ")"}], " ", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalD]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalC]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}], "-", 
+           RowBox[{"2", " ", "\[Mu]", " ", 
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], " ", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalC]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalD]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}]}],
+          Function[BoxForm`e$, 
+           MatrixForm[BoxForm`e$]]], " ", 
+         FractionBox["d\[CapitalOmega]", 
+          SuperscriptBox["\[Rho]", "3"]]}]}]}], "\[IndentingNewLine]"}]},
+    {
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["K", 
+        RowBox[{"\[GothicCapitalE]", ",", " ", "\[GothicCapitalA]"}]], "=", 
+       " ", 
+       RowBox[{
+        SubscriptBox["\[Integral]", "\[CapitalOmega]"], " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           OverscriptBox["L", "_"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[Mu]", " ", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalA]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Zeta]"}],
+               MultilineFunction->None], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalE]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+                RowBox[{"\[Rho]", " ", 
+                 FractionBox[
+                  RowBox[{"\[PartialD]", 
+                   RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalE]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                  RowBox[{"\[PartialD]", "\[Rho]"}],
+                  MultilineFunction->None]}]}], ")"}]}], "-", 
+             RowBox[{
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalE]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Zeta]"}],
+               MultilineFunction->None], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"\[Lambda]", "+", 
+                   RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalA]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "+", 
+                RowBox[{"\[Lambda]", " ", "\[Rho]", " ", 
+                 FractionBox[
+                  RowBox[{"\[PartialD]", 
+                   RowBox[{
+                    TemplateBox[{"N","\[GothicCapitalA]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                  RowBox[{"\[PartialD]", "\[Rho]"}],
+                  MultilineFunction->None]}]}], ")"}]}]}], ")"}]}],
+          Function[BoxForm`e$, 
+           MatrixForm[BoxForm`e$]]], 
+         FractionBox["d\[CapitalOmega]", 
+          SuperscriptBox["\[Rho]", "3"]]}]}]}], "\[IndentingNewLine]"}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalE]", ",", " ", "\[GothicCapitalB]"}]], "=", 
+      " ", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        TagBox[
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["L", "_"], "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Lambda]", "+", 
+                 RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}], "+", 
+              RowBox[{"\[Mu]", " ", 
+               SuperscriptBox["\[Rho]", "2"]}]}], ")"}], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalB]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalE]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}], "+", 
+           RowBox[{"\[Mu]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalB]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalE]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalE]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}]}]}], "\[Rho]"],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]], 
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalE]", ",", " ", "\[GothicCapitalC]"}]], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        TagBox[
+         FractionBox[
+          RowBox[{
+           RowBox[{"\[Mu]", " ", 
+            OverscriptBox["L", "_"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalC]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalC]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalE]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}], "-", 
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalE]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}], ")"}]}], 
+           "-", 
+           RowBox[{
+            OverscriptBox["L", "_"], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[Lambda]", "+", 
+              RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], "+", 
+              SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalC]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalE]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}]}], "\[Rho]"],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]], 
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalF]", ",", " ", "\[GothicCapitalA]"}]], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          RowBox[{"\[Rho]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              OverscriptBox["L", "_"], "2"], "+", 
+             SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[Lambda]", " ", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalA]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Rho]"}],
+               MultilineFunction->None], " ", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalF]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Zeta]"}],
+               MultilineFunction->None]}], "+", 
+             RowBox[{"\[Mu]", " ", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalA]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Zeta]"}],
+               MultilineFunction->None], " ", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalF]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+               RowBox[{"\[PartialD]", "\[Rho]"}],
+               MultilineFunction->None]}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["L", "_"], "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"\[Lambda]", "+", 
+                RowBox[{"2", " ", "\[Mu]"}]}], ")"}]}], "+", 
+             RowBox[{"\[Lambda]", " ", 
+              SuperscriptBox["\[Rho]", "2"]}]}], ")"}], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalA]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalF]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Zeta]"}],
+            MultilineFunction->None]}], "-", 
+          RowBox[{"2", " ", "\[Mu]", " ", 
+           SuperscriptBox[
+            OverscriptBox["L", "_"], "2"], " ", 
+           RowBox[{
+            TemplateBox[{"N","\[GothicCapitalF]"},
+             "Superscript"], "\[InvisibleApplication]", 
+            RowBox[{"(", 
+             RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalA]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+            RowBox[{"\[PartialD]", "\[Zeta]"}],
+            MultilineFunction->None]}]}],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]], 
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalF]", ",", " ", "\[GothicCapitalB]"}]], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          OverscriptBox["L", "_"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Lambda]", "+", 
+               RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["L", "_"], "2"], "+", 
+               SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Zeta]"}],
+              MultilineFunction->None], " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalF]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Zeta]"}],
+              MultilineFunction->None]}], "+", 
+            RowBox[{"\[Mu]", " ", "\[Rho]", " ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalB]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Rho]"}],
+              MultilineFunction->None], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[Rho]", " ", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  RowBox[{
+                   TemplateBox[{"N","\[GothicCapitalF]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                 RowBox[{"\[PartialD]", "\[Rho]"}],
+                 MultilineFunction->None]}], "-", 
+               RowBox[{"2", " ", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalF]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}], ")"}]}], 
+            "+", 
+            RowBox[{
+             RowBox[{
+              TemplateBox[{"N","\[GothicCapitalB]"},
+               "Superscript"], "\[InvisibleApplication]", 
+              RowBox[{"(", 
+               RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"4", " ", "\[Mu]", " ", 
+                RowBox[{
+                 TemplateBox[{"N","\[GothicCapitalF]"},
+                  "Superscript"], "\[InvisibleApplication]", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+               RowBox[{"2", " ", "\[Mu]", " ", "\[Rho]", " ", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  RowBox[{
+                   TemplateBox[{"N","\[GothicCapitalF]"},
+                    "Superscript"], "\[InvisibleApplication]", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                 RowBox[{"\[PartialD]", "\[Rho]"}],
+                 MultilineFunction->None]}]}], ")"}]}]}], ")"}]}], "\[Rho]"], 
+        
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]},
+    {
+     RowBox[{
+      SuperscriptBox["K", 
+       RowBox[{"\[GothicCapitalF]", ",", " ", "\[GothicCapitalC]"}]], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        TagBox[
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"\[Lambda]", "+", 
+              RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["L", "_"], "2"], "+", 
+               SuperscriptBox["\[Rho]", "2"]}], ")"}], "2"], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalC]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None], " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalF]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Zeta]"}],
+             MultilineFunction->None]}], "+", 
+           RowBox[{"\[Mu]", " ", "\[Rho]", " ", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalF]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+             RowBox[{"\[PartialD]", "\[Rho]"}],
+             MultilineFunction->None], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[Rho]", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox[
+                  OverscriptBox["L", "_"], "2"], "+", 
+                 SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalC]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}], "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox[
+                OverscriptBox["L", "_"], "2"], " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalC]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}]}], ")"}]}], 
+           "+", 
+           RowBox[{"2", " ", "\[Mu]", " ", 
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], " ", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalF]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalC]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], "-", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalC]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}]}]}], "\[Rho]"],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]], 
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]}
+   },
+   GridBoxItemSize->{"Columns" -> {{
+        Scaled[0.96]}}}], TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.714688436771379*^9, 3.7146886094677753`*^9}, {
+  3.714689066609398*^9, 3.7146890666096354`*^9}, {3.7146891368020287`*^9, 
+  3.714689245452544*^9}, {3.7146894724748373`*^9, 3.7146895743342047`*^9}}],
+
+Cell["", "Text"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         SuperscriptBox["F", "\[GothicCapitalD]"], "=", 
+         RowBox[{
+          SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+          TagBox[
+           RowBox[{
+            RowBox[{"-", "\[Alpha]\[CapitalDelta]T"}], " ", 
+            SuperscriptBox["\[Rho]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "\[Lambda]"}], "+", 
+              RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+            SubscriptBox["b", 
+             RowBox[{"\[Rho]", ",", "\[GothicCapitalD]"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               TemplateBox[{"N","\[GothicCapitalD]"},
+                "Superscript"], "\[InvisibleApplication]", 
+               RowBox[{"(", 
+                RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}], "+", 
+              RowBox[{"\[Rho]", " ", 
+               FractionBox[
+                RowBox[{"\[PartialD]", 
+                 RowBox[{
+                  TemplateBox[{"N","\[GothicCapitalD]"},
+                   "Superscript"], "\[InvisibleApplication]", 
+                  RowBox[{"(", 
+                   RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+                RowBox[{"\[PartialD]", "\[Rho]"}],
+                MultilineFunction->None]}]}], ")"}], 
+            FractionBox["d\[CapitalOmega]", 
+             SuperscriptBox["\[Rho]", "3"]], " "}],
+           Function[BoxForm`e$, 
+            MatrixForm[BoxForm`e$]]]}]}]},
+       {
+        RowBox[{
+         SuperscriptBox["F", "\[GothicCapitalE]"], "=", 
+         RowBox[{
+          SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+          RowBox[{
+           TagBox[
+            RowBox[{"\[Alpha]\[CapitalDelta]T", " ", "\[Rho]", " ", 
+             OverscriptBox["L", "_"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"3", " ", "\[Lambda]"}], "+", 
+               RowBox[{"2", " ", "\[Mu]"}]}], ")"}], "  ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{
+                TemplateBox[{"N","\[GothicCapitalE]"},
+                 "Superscript"], "\[InvisibleApplication]", 
+                RowBox[{"(", 
+                 RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+              RowBox[{"\[PartialD]", "\[Zeta]"}],
+              MultilineFunction->None]}],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], 
+           FractionBox["d\[CapitalOmega]", 
+            SuperscriptBox["\[Rho]", "3"]], " "}]}]}]}
+      },
+      GridBoxAlignment->{"Columns" -> {{"="}}}]},
+    {
+     RowBox[{
+      SuperscriptBox["F", "\[GothicCapitalF]"], "=", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "\[CapitalOmega]"], 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          RowBox[{"-", "\[Alpha]\[CapitalDelta]T"}], " ", "\[Rho]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\[Lambda]"}], "+", 
+            RowBox[{"2", " ", "\[Mu]"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             OverscriptBox["L", "_"], "2"], "+", 
+            SuperscriptBox["\[Rho]", "2"]}], ")"}], " ", 
+          SubscriptBox["b", 
+           RowBox[{"\[Zeta]", ",", "\[GothicCapitalF]"}]], " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{
+             TemplateBox[{"N","\[GothicCapitalF]"},
+              "Superscript"], "\[InvisibleApplication]", 
+             RowBox[{"(", 
+              RowBox[{"\[Rho]", ",", "\[Zeta]"}], ")"}]}]}], 
+           RowBox[{"\[PartialD]", "\[Zeta]"}],
+           MultilineFunction->None]}],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]], 
+        FractionBox["d\[CapitalOmega]", 
+         SuperscriptBox["\[Rho]", "3"]]}]}]}]}
+   },
+   GridBoxItemSize->{"Columns" -> {{
+        Scaled[0.96]}}}], TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.714689091394541*^9, 3.714689116742711*^9}, {
+  3.714689187596829*^9, 3.7146891875969057`*^9}, {3.714689443068762*^9, 
+  3.714689477873928*^9}, {3.714689676697237*^9, 3.714689712950715*^9}, {
+  3.714690284559134*^9, 3.714690289709935*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["u", "\[Rho]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["u", "\[Phi]"]},
+      "NotationTemplateTag"], "]"}], ";", " ", 
+    RowBox[{"Symbolize", "[", 
+     TemplateBox[{SuperscriptBox["u", "\[Zeta]"]},
+      "NotationTemplateTag"], "]"}], ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"CoVarDisp", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "3"], 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["g", 
+           RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], 
+          SuperscriptBox["u", 
+           RowBox[{"j", "\[CenterDot]"}]]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\[Mu]", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["g", 
+          RowBox[{"i", "\[CenterDot]", "r", "\[CenterDot]"}]], " ", 
+         SuperscriptBox["g", 
+          RowBox[{"j", "\[CenterDot]", "s", "\[CenterDot]"}]]}], "+", 
+        RowBox[{
+         SuperscriptBox["g", 
+          RowBox[{"i", "\[CenterDot]", "s", "\[CenterDot]"}]], " ", 
+         SuperscriptBox["g", 
+          RowBox[{"j", "\[CenterDot]", "r", "\[CenterDot]"}]]}], "+", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"2", "\[Eta]"}], 
+          RowBox[{"1", "-", 
+           RowBox[{"2", "\[Eta]"}]}]], 
+         SuperscriptBox["g", 
+          RowBox[{"i", "\[CenterDot]", "j", "\[CenterDot]"}]], 
+         SuperscriptBox["g", 
+          RowBox[{"r", "\[CenterDot]", "s", "\[CenterDot]"}]]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "1", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"r", ",", "1", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"ContraVarDisp", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["u", "\[Rho]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", 
+       RowBox[{
+        SuperscriptBox["u", "\[Phi]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}], ",", " ", 
+       RowBox[{
+        SuperscriptBox["u", "\[Zeta]"], "[", 
+        RowBox[{"\[Rho]", ",", "\[Zeta]"}], "]"}]}], "}"}]}], ";"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.7146886366089*^9, 3.714688638109666*^9}}]
+}, Open  ]]
+},
+WindowSize->{1032, 833},
+WindowMargins->{{15, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 19009, 435, 1770, "Input"],
+Cell[CellGroupData[{
+Cell[19592, 459, 4611, 138, 328, "Input"],
+Cell[24206, 599, 977, 27, 83, "Output"],
+Cell[25186, 628, 1279, 37, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26502, 670, 4594, 117, 232, "Input"],
+Cell[31099, 789, 1076, 27, 75, "Output"],
+Cell[32178, 818, 1983, 51, 87, "Output"],
+Cell[34164, 871, 1366, 35, 79, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35567, 911, 2890, 77, 148, "Input"],
+Cell[38460, 990, 8116, 209, 325, "Output"]
+}, Open  ]],
+Cell[46591, 1202, 124, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[46740, 1208, 3047, 80, 211, "Input"],
+Cell[49790, 1290, 2825, 77, 225, "Output"]
+}, Open  ]],
+Cell[52630, 1370, 1280, 33, 51, "Input"],
+Cell[53913, 1405, 1151, 30, 58, "Input"],
+Cell[CellGroupData[{
+Cell[55089, 1439, 588, 15, 36, "Input"],
+Cell[55680, 1456, 9196, 250, 174, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64913, 1711, 2201, 61, 125, "Input"],
+Cell[67117, 1774, 10350, 259, 154, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77504, 2038, 1579, 57, 146, "Subsection"],
+Cell[79086, 2097, 34216, 830, 456, "Text"],
+Cell[113305, 2929, 16, 0, 30, "Text"],
+Cell[113324, 2931, 4206, 106, 128, "Text"],
+Cell[117533, 3039, 3008, 81, 289, "Input"]
+}, Open  ]]
+}
+]
+*)
+
