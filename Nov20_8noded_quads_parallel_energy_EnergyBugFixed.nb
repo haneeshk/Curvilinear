@@ -3,43 +3,66 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    364003,       9255]
-NotebookOptionsPosition[    349019,       8854]
-NotebookOutlinePosition[    356560,       9040]
-CellTagsIndexPosition[    356140,       9027]
+NotebookDataLength[    373447,       9622]
+NotebookOptionsPosition[    356064,       9102]
+NotebookOutlinePosition[    364732,       9342]
+CellTagsIndexPosition[    364312,       9329]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{"Button", "[", 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"Style", "[", 
-    RowBox[{"\"\<Clear All Output\>\"", ",", 
-     RowBox[{"FontFamily", "\[Rule]", "\"\<Consolas\>\""}], ",", " ", 
-     RowBox[{"FontWeight", "\[Rule]", "\"\<Thin\>\""}], ",", 
-     RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}], ",", 
-   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"FrontEndExecute", "[", 
-      RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
-      "]"}], "\[IndentingNewLine]", 
+     RowBox[{"AutoCollapse", "[", "]"}], ":=", 
+     RowBox[{"(", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"$FrontEnd", "=!=", "$Failed"}], ",", 
+        RowBox[{
+         RowBox[{"SelectionMove", "[", 
+          RowBox[{
+           RowBox[{"EvaluationNotebook", "[", "]"}], ",", "All", ",", 
+           "GeneratedCell"}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{
+         "FrontEndTokenExecute", "[", "\"\<SelectionCloseUnselectedCells\>\"",
+           "]"}]}]}], "]"}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Button", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<Clear All Output\>\"", ",", 
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Consolas\>\""}], ",", " ", 
+       RowBox[{"FontWeight", "\[Rule]", "\"\<Thin\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{
-     "NotebookLocate", "[", "\"\<PrimitiveInitialization\>\"", "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"SelectionEvaluate", "[", 
-     RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ",", 
-   RowBox[{"Appearance", "->", "\"\<Frameless\>\""}]}], "\[IndentingNewLine]",
-   "]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"AutoCollapse", "[", "]"}], ";"}]}], "Input",
+      RowBox[{"FrontEndExecute", "[", 
+       RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"NotebookLocate", "[", "\"\<PrimitiveInitialization\>\"", "]"}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"SelectionEvaluate", "[", 
+       RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}]}], "\n", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720470217835763*^9, 3.720470229749324*^9}, {
    3.720471418140239*^9, 3.720471430486944*^9}, {3.720473645121574*^9, 
    3.720473677976746*^9}, {3.7205429244897747`*^9, 3.72054293508639*^9}, 
-   3.720542967424595*^9, {3.720543008912875*^9, 3.72054305602188*^9}},
+   3.720542967424595*^9, {3.720543008912875*^9, 3.72054305602188*^9}, {
+   3.7223037763387623`*^9, 3.722303823218596*^9}, {3.722304016324942*^9, 
+   3.722304021933299*^9}, 3.7223040658793583`*^9, {3.722304143917276*^9, 
+   3.722304145085402*^9}, {3.722304241208799*^9, 3.722304280324336*^9}, {
+   3.722304363407837*^9, 3.7223043974219513`*^9}, {3.722304466030349*^9, 
+   3.722304488170206*^9}, {3.7223050728578978`*^9, 3.7223050762982407`*^9}, {
+   3.722305194608181*^9, 3.7223051981124067`*^9}, {3.722305231964855*^9, 
+   3.7223052600099983`*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
  CellTags->"PrimitiveInitialization"],
@@ -51,16 +74,112 @@ Cell[BoxData[
    FontFamily->"Consolas",
    FontSize->12,
    FontWeight->"Thin"],
-  Appearance->"Frameless",
+  Appearance->Automatic,
   ButtonFunction:>(FrontEndExecute[
-      FrontEndToken["DeleteGeneratedCells"]] 
-    NotebookLocate["PrimitiveInitialization"]; SelectionEvaluate[
+     FrontEndToken["DeleteGeneratedCells"]]; 
+   NotebookLocate["PrimitiveInitialization"]; SelectionEvaluate[
      EvaluationNotebook[]]),
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{{3.720542957241178*^9, 3.720543057490073*^9}},
+ CellChangeTimes->{3.722305594055994*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nb", "=", 
+   RowBox[{"Evaluate", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Button", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Fold Input Cells\>\"", ",", 
+      RowBox[{"FontFamily", "\[Rule]", "\"\<Consolas\>\""}], ",", " ", 
+      RowBox[{"FontWeight", "\[Rule]", "\"\<Thin\>\""}], ",", 
+      RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"cells", "=", 
+      RowBox[{"Cells", "[", 
+       RowBox[{"nb", ",", 
+        RowBox[{"CellStyle", "\[Rule]", "\"\<Input\>\""}]}], "]"}]}], ";", 
+     "\n", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"SetOptions", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"CellOpen", "\[Rule]", "False"}]}], "]"}], "&"}], "/@", 
+      "cells"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"FrontEndExecute", "[", 
+     RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+     "]"}], "*)"}], "\n", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Button", "[", 
+  RowBox[{
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<Show Input\>\"", ",", 
+     RowBox[{"FontFamily", "\[Rule]", "\"\<Consolas\>\""}], ",", " ", 
+     RowBox[{"FontWeight", "\[Rule]", "\"\<Thin\>\""}], ",", 
+     RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cells", "=", 
+     RowBox[{"Cells", "[", 
+      RowBox[{"nb", ",", 
+       RowBox[{"CellStyle", "\[Rule]", "\"\<Input\>\""}]}], "]"}]}], ";", 
+    "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"SetOptions", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"CellOpen", "\[Rule]", "True"}]}], "]"}], "&"}], "/@", 
+     "cells"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"FrontEndExecute", "[", 
+    RowBox[{"FrontEndToken", "[", "\"\<DeleteGeneratedCells\>\"", "]"}], 
+    "]"}], "*)"}], "\n", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
+ CellChangeTimes->{{3.722304598312953*^9, 3.722304645929799*^9}, {
+  3.7223048191359987`*^9, 3.722304826816424*^9}},
+ CellTags->"PrimitiveInitialization"],
+
+Cell[BoxData[
+ ButtonBox[
+  StyleBox["\<\"Fold Input Cells\"\>",
+   StripOnInput->False,
+   FontFamily->"Consolas",
+   FontSize->12,
+   FontWeight->"Thin"],
+  Appearance->Automatic,
+  ButtonFunction:>($CellContext`cells = 
+    Cells[$CellContext`nb, CellStyle -> "Input"]; 
+   Map[SetOptions[#, CellOpen -> False]& , $CellContext`cells]),
+  Evaluator->Automatic,
+  Method->"Preemptive"]], "Output",
+ CellChangeTimes->{3.722305594240734*^9},
+ CellTags->"PrimitiveInitialization"],
+
+Cell[BoxData[
+ ButtonBox[
+  StyleBox["\<\"Show Input\"\>",
+   StripOnInput->False,
+   FontFamily->"Consolas",
+   FontSize->12,
+   FontWeight->"Thin"],
+  Appearance->Automatic,
+  ButtonFunction:>($CellContext`cells = 
+    Cells[$CellContext`nb, CellStyle -> "Input"]; 
+   Map[SetOptions[#, CellOpen -> True]& , $CellContext`cells]),
+  Evaluator->Automatic,
+  Method->"Preemptive"]], "Output",
+ CellChangeTimes->{3.7223055942523317`*^9},
+ CellTags->"PrimitiveInitialization"]
+}, {2, 3}]],
 
 Cell[CellGroupData[{
 
@@ -82,6 +201,8 @@ Cell[BoxData[
  WholeCellGroupOpener->False,
  GroupOpenerInsideFrame->False,
  ShowShortBoxForm->True,
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720470463886565*^9, 3.720470485455058*^9}, {
   3.720470735153624*^9, 3.7204707394618473`*^9}, {3.720470782938931*^9, 
   3.7204707857771807`*^9}, {3.720470831403607*^9, 3.7204708504988832`*^9}, {
@@ -98,7 +219,7 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.7205429572927313`*^9},
+ CellChangeTimes->{3.722305594388441*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 
@@ -118,6 +239,8 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"AutoCollapse", "[", "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720471163776328*^9, 3.720471184018573*^9}, {
   3.720471239283811*^9, 3.720471255331105*^9}, {3.7204715750285597`*^9, 
   3.720471597963211*^9}, {3.720473967404858*^9, 3.7204739701562157`*^9}},
@@ -133,7 +256,7 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.720542957345694*^9},
+ CellChangeTimes->{3.722305594506855*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 
@@ -151,6 +274,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"AutoCollapse", "[", "]"}], ";"}], "\[IndentingNewLine]"}], "Input",\
 
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720476217298358*^9, 3.7204762296897287`*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
@@ -163,7 +288,7 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.720542957399879*^9},
+ CellChangeTimes->{3.722305594622781*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 
@@ -185,6 +310,8 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"AutoCollapse", "[", "]"}], ";"}], 
    "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.72048062143891*^9, 3.7204806524182177`*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
@@ -198,7 +325,7 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.7205429574541807`*^9},
+ CellChangeTimes->{3.722305594738743*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 
@@ -216,6 +343,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"AutoCollapse", "[", "]"}], ";"}], "\[IndentingNewLine]"}], "Input",\
 
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7204805902862883`*^9, 3.720480599997468*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
@@ -228,7 +357,7 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.720542957508708*^9},
+ CellChangeTimes->{3.7223055948548613`*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 
@@ -248,6 +377,8 @@ Cell[BoxData[
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"AutoCollapse", "[", "]"}], ";"}]}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720481064093605*^9, 3.7204810882763567`*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
@@ -261,9 +392,12 @@ Cell[BoxData[
      EvaluationNotebook[]],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.7205429575623703`*^9},
+ CellChangeTimes->{3.722305594970777*^9},
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.7223054963412943`*^9}],
 
 Cell[CellGroupData[{
 
@@ -272,6 +406,7 @@ Cell[TextData[StyleBox["Initialization",
  FontSize->18,
  FontWeight->"Bold",
  FontColor->RGBColor[0.5450980392156862, 0., 0.]]], "Section",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.715072803155204*^9, 3.715072814047535*^9}, 
    3.715355885401547*^9, {3.7153575481949883`*^9, 3.7153575495449142`*^9}, {
    3.7153790806577377`*^9, 3.715379086143052*^9}, 3.715379768594151*^9},
@@ -326,6 +461,8 @@ Cell[BoxData[{
  ShowGroupOpener->True,
  ShowClosedCellArea->True,
  GroupOpenerColor->RGBColor[0.994537, 0.735912, 0.237568],
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7146682901740522`*^9, 3.714668357989232*^9}, 
    3.7146683953876753`*^9, {3.7146685474783497`*^9, 3.7146685789901257`*^9}, {
    3.714668643387423*^9, 3.714668712526799*^9}, {3.7146688037113*^9, 
@@ -362,13 +499,14 @@ Cell[BoxData[{
    3.7153816920821457`*^9, 3.71538171416959*^9}, {3.715891551739902*^9, 
    3.715891559121314*^9}, {3.7180168006172023`*^9, 3.7180168008332148`*^9}, {
    3.718017043617101*^9, 3.718017046201249*^9}, 3.719687216690793*^9, {
-   3.720471085848114*^9, 3.720471108629897*^9}},
+   3.720471085848114*^9, 3.720471108629897*^9}, 3.722304766001172*^9, {
+   3.722305608954548*^9, 3.7223056103294897`*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
  CellTags->{"InitializationCell", "In[545]:="}],
 
 Cell[BoxData["\<\"Variable Cleared\"\>"], "Print",
- CellChangeTimes->{3.720542987289885*^9},
+ CellChangeTimes->{{3.722305600653634*^9, 3.722305613170813*^9}},
  CellTags->{"InitializationCell", "In[545]:="}]
 }, {2}]],
 
@@ -876,10 +1014,9 @@ Cell[BoxData[{
     "NotationTemplateTag"], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Print", "[", "\"\<New Symbols Defined\>\"", 
   "]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"AutoCollapse", "[", "]"}], "*)"}]}]}], "Input",
- Editable->False,
+ RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7146682901740522`*^9, 3.714668357989232*^9}, 
    3.7146683953876753`*^9, {3.7146685474783497`*^9, 3.7146685789901257`*^9}, {
    3.714668643387423*^9, 3.714668712526799*^9}, {3.7146688037113*^9, 
@@ -922,13 +1059,14 @@ Cell[BoxData[{
    3.7179517720537815`*^9, 3.7179517729658337`*^9}, {3.7180170680675*^9, 
    3.718017068273512*^9}, {3.7201836979866548`*^9, 3.720183732491189*^9}, {
    3.720372809707843*^9, 3.7203728240774183`*^9}, {3.720531662970379*^9, 
-   3.720531676964829*^9}, {3.720538693858961*^9, 3.720538708609305*^9}},
+   3.720531676964829*^9}, {3.720538693858961*^9, 3.720538708609305*^9}, {
+   3.7223038418000307`*^9, 3.722303859664257*^9}},
  FontFamily->"Consolas",
  FontWeight->"Regular",
  CellTags->"InitializationCell"],
 
 Cell[BoxData["\<\"New Symbols Defined\"\>"], "Print",
- CellChangeTimes->{3.7205429898373747`*^9},
+ CellChangeTimes->{{3.722305601976698*^9, 3.72230561470601*^9}},
  CellTags->"InitializationCell"]
 }, {2}]],
 
@@ -1262,7 +1400,8 @@ Cell[BoxData[{
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
  Editable->False,
- CellOpen->False,
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7146682901740522`*^9, 3.714668357989232*^9}, 
    3.7146683953876753`*^9, {3.7146685474783497`*^9, 3.7146685789901257`*^9}, {
    3.714668643387423*^9, 3.714668712526799*^9}, {3.7146688037113*^9, 
@@ -1308,7 +1447,7 @@ Cell[BoxData[{
  CellTags->"InitializationCell"],
 
 Cell[BoxData["\<\"Print Subroutines Defined\"\>"], "Print",
- CellChangeTimes->{3.7205429903456*^9},
+ CellChangeTimes->{{3.72230560237764*^9, 3.7223056151330147`*^9}},
  CellTags->"InitializationCell"]
 }, {2}]],
 
@@ -1902,6 +2041,8 @@ Selectable->False]\)\n\>\""}], ";"}], "\[IndentingNewLine]",
  RowBox[{"Print", "[", "\"\<Nomenclature defined\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7148621963371067`*^9, 3.7148621976694517`*^9}, {
    3.714862295559167*^9, 3.714862439105014*^9}, {3.7149172992023773`*^9, 
    3.714917337468775*^9}, {3.714917888496334*^9, 3.7149179383174334`*^9}, {
@@ -1953,10 +2094,10 @@ Selectable->False]\)\n\>\""}], ";"}], "\[IndentingNewLine]",
  CellTags->"InitializationCell"],
 
 Cell[BoxData["\<\"Nomenclature defined\"\>"], "Print",
- CellChangeTimes->{3.720542990944764*^9},
+ CellChangeTimes->{{3.722305602871134*^9, 3.722305615695384*^9}},
  CellTags->"InitializationCell"]
 }, {2}]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1965,6 +2106,7 @@ Cell[TextData[StyleBox["Problem Formulations: Theory",
  FontSize->16,
  FontWeight->"Bold",
  FontColor->RGBColor[0.5450980392156862, 0., 0.]]], "Section",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.715355767214774*^9, 3.7153557745971107`*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -2046,6 +2188,8 @@ Cell[BoxData[{
     "\"\<Christoffel Symbols components\>\""}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
    3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
@@ -2149,6 +2293,8 @@ Cell[BoxData[{
      ",", "\"\<Metric Tensor, Contravariant  components: \>\""}], "]"}], 
    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
    3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
@@ -2351,6 +2497,8 @@ Cell[BoxData[{"2", "\[IndentingNewLine]",
     ",", "\"\<Contravariant components of the displacement variation  vector \
 \\n\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
    3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
@@ -2524,6 +2672,8 @@ Cell[BoxData[
             RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}], "//", 
        "Pprint"}]}], "*)"}], "}"}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}]}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714674912102365*^9, {3.714675056260852*^9, 3.714675056980878*^9}, {
    3.714675791732608*^9, 3.714675804890439*^9}, {3.714676101055131*^9, 
@@ -2587,6 +2737,8 @@ Cell[BoxData[{
  RowBox[{"Print", "[", "\"\<Stiffness Defined\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714676397578353*^9, 3.71467641637295*^9}, {
    3.714676979882523*^9, 3.714676996412098*^9}, 3.714683438522211*^9, 
    3.715212697007022*^9, 3.715379725622677*^9, {3.7153820009430943`*^9, 
@@ -2642,6 +2794,8 @@ Cell[BoxData[{
        RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], "//", "Pprint"}], 
   "}"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714676419309455*^9, 3.7146765152243156`*^9}, 
    3.714676772952157*^9, {3.71468613032321*^9, 3.714686156134083*^9}, {
    3.714686194691167*^9, 3.714686201543836*^9}, 3.715212697007345*^9, 
@@ -2671,6 +2825,8 @@ Cell[BoxData[{
  RowBox[{"Print", "[", "\"\<Strain Energy Density\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714683218567567*^9, 3.714683231409988*^9}, {
    3.714689593437842*^9, 3.714689598905712*^9}, 3.714842935299191*^9, 
    3.7152126970078077`*^9, {3.715377341342909*^9, 3.71537735492801*^9}, 
@@ -2821,6 +2977,8 @@ Cell[BoxData[{
       RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], "//", 
   "Pprint"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714845594095241*^9, 3.714845595937228*^9}, 
    3.714862117377717*^9, {3.71486217212929*^9, 3.714862174946321*^9}, {
    3.7148622437507267`*^9, 3.7148622755001163`*^9}, 3.7152051207139463`*^9, 
@@ -2885,6 +3043,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"AutoCollapse", "[", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714862192115436*^9, 3.714862192905216*^9}, {
    3.714862479135194*^9, 3.714862601098115*^9}, 3.7148626319098883`*^9, {
    3.7148626942039547`*^9, 3.714862698867567*^9}, 3.7152126970096188`*^9, 
@@ -2895,6 +3055,7 @@ Cell[BoxData[{
  FontWeight->"Regular"],
 
 Cell["Global to Local Transformation", "Text",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.717429735050857*^9, 3.717429757945796*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -3097,6 +3258,8 @@ Cell[BoxData[
        RowBox[{"(", "b", ")"}]], "[", 
       RowBox[{"\[Xi]", ",", "\[Eta]"}], "]"}]}]}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}]}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.7148621943640127`*^9, {3.715211177571847*^9, 3.715211206718246*^9}, 
    3.7152126970100317`*^9, {3.7152176591361837`*^9, 3.715217783514565*^9}, 
@@ -3304,6 +3467,8 @@ Cell[BoxData[{
      RowBox[{"(", "b", ")"}]], "[", 
     RowBox[{"\[Xi]", ",", "\[Eta]"}], "]"}]}]}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.7148621943640127`*^9, {3.715211177571847*^9, 3.715211206718246*^9}, 
    3.7152126970100317`*^9, {3.7152176591361837`*^9, 3.715217783514565*^9}, 
@@ -3331,6 +3496,7 @@ Cell[TextData[{
   FontWeight->"Bold",
   FontColor->RGBColor[0.5450980392156862, 0., 0.]]
 }], "Section",
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714862195345368*^9, {3.714994487379437*^9, 3.714994497965662*^9}, {
    3.715355858428784*^9, 3.715355874968198*^9}},
@@ -3349,6 +3515,7 @@ Cell[TextData[{
   FontSize->16,
   FontColor->RGBColor[0.5450980392156862, 0., 0.]]
 }], "Subsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.715355912120022*^9, 3.7153559160793324`*^9}, 
    3.715356088427513*^9},
  FontFamily->"Consolas",
@@ -3429,6 +3596,8 @@ Cell[BoxData[{
       SubscriptBox["\[Eta]", "g"]}]}], " ", "\[IndentingNewLine]", "]"}]}], 
   " "}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714926857447947*^9, 3.7150125790455*^9, {3.7150126127980623`*^9, 
    3.7150126135466337`*^9}, 3.715356291523815*^9, {3.715382404777079*^9, 
@@ -3526,6 +3695,8 @@ Cell[BoxData[{
     RowBox[{"\"\<Defined SetUpIDArray\>\"", ",", "Orange"}], "]"}], "]"}], 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714926857447947*^9, 3.7150125790455*^9, {3.7150126127980623`*^9, 
    3.7150126135466337`*^9}, 3.715356291523815*^9, {3.715379247874812*^9, 
@@ -3875,6 +4046,8 @@ Cell[BoxData[
       "\"\<Defined \!\(\*SuperscriptBox[\(k\), \(e\)]\)\>\"", ",", "Orange"}],
        "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714926857447947*^9, 3.7150125790455*^9, {3.7150126127980623`*^9, 
    3.7150126135466337`*^9}, 3.715356291523815*^9, {3.715379247874812*^9, 
@@ -3968,6 +4141,8 @@ Cell[BoxData[
       "\"\<Defined \!\(\*SuperscriptBox[\(f\), \(e\)]\)\>\"", ",", "Orange"}],
        "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.714926857447947*^9, 3.7150125790455*^9, {3.7150126127980623`*^9, 
    3.7150126135466337`*^9}, 3.715356291523815*^9, {3.715379247874812*^9, 
@@ -4285,7 +4460,9 @@ Cell[BoxData[{
     RowBox[{"\"\<Defined CalculateGuassPoints\>\"", ",", "Orange"}], "]"}], 
    "]"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714927733763413*^9, 3.714927738493059*^9}, {
    3.7149278717854967`*^9, 3.714927875305402*^9}, 3.714927936126444*^9, {
    3.714928040178577*^9, 3.714928093418296*^9}, {3.714928141940085*^9, 
@@ -4747,7 +4924,9 @@ Cell[BoxData[
       RowBox[{"\"\<Defined ElementJacobian\>\"", ",", "Orange"}], "]"}], 
      "]"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}]}]}]], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714927733763413*^9, 3.714927738493059*^9}, {
    3.7149278717854967`*^9, 3.714927875305402*^9}, 3.714927936126444*^9, {
    3.714928040178577*^9, 3.714928093418296*^9}, {3.714928141940085*^9, 
@@ -4892,7 +5071,9 @@ Cell[BoxData[{
     RowBox[{"\"\<Defined Guass Integrate\>\"", ",", "Orange"}], "]"}], "]"}], 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.715204527838962*^9, 3.715204627240924*^9}, {
    3.7152046697216253`*^9, 3.715204681905212*^9}, {3.7152121817556562`*^9, 
    3.715212183796369*^9}, {3.71521316777667*^9, 3.715213224165394*^9}, 
@@ -5100,7 +5281,9 @@ Cell[BoxData[
       "\"\<Defined ComputeElementStiffnessMatrix\>\"", ",", "Orange"}], "]"}],
       "]"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"AutoCollapse", "[", "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714927733763413*^9, 3.714927738493059*^9}, {
    3.7149278717854967`*^9, 3.714927875305402*^9}, 3.714927936126444*^9, {
    3.714928040178577*^9, 3.714928093418296*^9}, {3.714928141940085*^9, 
@@ -5322,7 +5505,9 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"AutoCollapse", "[", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714927733763413*^9, 3.714927738493059*^9}, {
    3.7149278717854967`*^9, 3.714927875305402*^9}, 3.714927936126444*^9, {
    3.714928040178577*^9, 3.714928093418296*^9}, {3.714928141940085*^9, 
@@ -5476,7 +5661,9 @@ Cell[BoxData[{
      RowBox[{"\"\<Defined SplitSolution\>\"", ",", "Orange"}], "]"}], "]"}], 
    "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714927733763413*^9, 3.714927738493059*^9}, {
    3.7149278717854967`*^9, 3.714927875305402*^9}, 3.714927936126444*^9, {
    3.714928040178577*^9, 3.714928093418296*^9}, {3.714928141940085*^9, 
@@ -5683,6 +5870,8 @@ Cell[BoxData[{
     "\"\<Defined ComputeElementStiffnessMatrixForStressProjection\>\"", ",", 
      "Orange"}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718546425653658*^9, 3.71854651301875*^9}, {
    3.718546570185878*^9, 3.7185466070976954`*^9}, {3.718547143568362*^9, 
    3.718547285591485*^9}, {3.718547417536436*^9, 3.7185474493492556`*^9}, {
@@ -6001,6 +6190,8 @@ Cell[BoxData[{
      "\"\<Defined ComputeGlobalForceMatrixForStressProjection\>\"", ",", 
       "Orange"}], "]"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718546425653658*^9, 3.71854651301875*^9}, {
    3.718546570185878*^9, 3.7185466070976954`*^9}, {3.718547143568362*^9, 
    3.718547285591485*^9}, {3.718547417536436*^9, 3.7185474493492556`*^9}, {
@@ -6035,6 +6226,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["Create Geometry, Mesh and Mesh Data Structures",
  FontSize->14,
  FontColor->RGBColor[0.5450980392156862, 0., 0.]]], "Subsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7149207782422953`*^9, 3.714920781750795*^9}, {
    3.715199541107502*^9, 3.715199549419949*^9}, 3.715219424088564*^9, {
    3.715356174402059*^9, 3.71535622589365*^9}, {3.720480481786845*^9, 
@@ -6123,6 +6315,8 @@ Cell[BoxData[{
   SuperscriptBox["\[CapitalOmega]", "h"], "[", "\"\<Wireframe\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7149113007487383`*^9, 3.714911389601707*^9}, {
    3.714911462095167*^9, 3.714911492484234*^9}, {3.714911637957663*^9, 
    3.714911687625965*^9}, {3.7149120973282833`*^9, 3.714912125344273*^9}, {
@@ -6381,6 +6575,8 @@ Cell[BoxData[{
     SubscriptBox["n", "eq"], ",", "IEN", ",", "ID", ",", "ElementMesh", ",", 
     " ", "NMat"}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.714920560660956*^9, 3.714920564059531*^9}, 
    3.714920793488742*^9, {3.714921204080545*^9, 3.714921228869939*^9}, {
    3.714924265001143*^9, 3.714924267240924*^9}, {3.714924402443411*^9, 
@@ -6471,6 +6667,8 @@ Cell[BoxData[{
        RowBox[{"\[FreakedSmiley]", ",", "Large"}], "}"}]}]}], "]"}]}], 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.715003645933724*^9, 3.715003705749175*^9}, {
    3.715004159244919*^9, 3.715004191260898*^9}, {3.71500423413757*^9, 
    3.7150043370724382`*^9}, {3.715004596302678*^9, 3.715004639079301*^9}, {
@@ -6493,6 +6691,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["Solve",
  FontSize->14,
  FontColor->RGBColor[0.5450980392156862, 0., 0.]]], "Subsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7149207782422953`*^9, 3.714920781750795*^9}, {
    3.715199541107502*^9, 3.715199549419949*^9}, 3.715219424088564*^9, {
    3.715356174402059*^9, 3.71535622589365*^9}, {3.720480554223311*^9, 
@@ -6605,6 +6804,8 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
        SubscriptBox["n", "dof"]}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.719409672844898*^9, 3.719409715288463*^9}, {
    3.719409754376689*^9, 3.7194097819738703`*^9}, 3.719410191570606*^9, 
    3.71941038102805*^9, {3.719410438492523*^9, 3.719410469518529*^9}, {
@@ -6630,6 +6831,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["Post-processing ",
  FontSize->18,
  FontColor->RGBColor[0.5450980392156862, 0., 0.]]], "Subsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7149207782422953`*^9, 3.714920781750795*^9}, {
    3.715199541107502*^9, 3.715199549419949*^9}, 3.715219424088564*^9, {
    3.715356174402059*^9, 3.71535622589365*^9}, {3.7204804605210876`*^9, 
@@ -6656,6 +6858,7 @@ Cell[TextData[{
    SuperscriptBox["u", "\[Zeta]"], TraditionalForm]]],
  " w.r.t {\[Rho], \[Zeta]}"
 }], "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718554432122613*^9, 3.7185544839059234`*^9}, {
   3.7185545663940034`*^9, 3.718554568930292*^9}},
  FontFamily->"Consolas",
@@ -6744,6 +6947,8 @@ Cell[BoxData[{
     RowBox[{"Total", "@", 
      RowBox[{"ParallelEvaluate", "[", "l33Mat", "]"}]}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186208052630835`*^9, 3.7186208258046494`*^9}, {
    3.7195775119089317`*^9, 3.719577576726177*^9}, {3.719577645149728*^9, 
    3.71957768696537*^9}, {3.7195777400299354`*^9, 3.7195778312588367`*^9}, 
@@ -6796,6 +7001,8 @@ Cell[BoxData[{
  RowBox[{"t2", " ", "=", " ", 
   RowBox[{
    RowBox[{"AbsoluteTime", "[", "]"}], " ", "-", " ", "t1"}]}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718620851783798*^9, 3.718620879566725*^9}, 
    3.7195797688278008`*^9, {3.719659651859333*^9, 3.719659666530808*^9}, {
    3.7198351576526766`*^9, 3.7198351683768435`*^9}},
@@ -6807,6 +7014,7 @@ Cell[BoxData[{
 Cell[CellGroupData[{
 
 Cell["Computing Stress and strain", "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7180274746574736`*^9, 3.7180274826738462`*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -7007,6 +7215,8 @@ Cell[BoxData[{
       RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7179521532475843`*^9, 3.7179522243176494`*^9}, 
    3.7179524653504353`*^9, {3.718632286412117*^9, 3.718632287410882*^9}, {
    3.71863397825228*^9, 3.718633985820897*^9}, 3.7187088089966235`*^9, 
@@ -7016,6 +7226,8 @@ Cell[BoxData[{
  CellTags->"PostProcessingSubroutines"],
 
 Cell[BoxData[""], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718634038914973*^9, 3.7186340488551254`*^9}, 
    3.7205316554371443`*^9},
  FontFamily->"Consolas",
@@ -7143,6 +7355,8 @@ Cell[BoxData[{
      RowBox[{"U13", "@@", "\[Chi]"}], ",", 
      RowBox[{"U23", "@@", "\[Chi]"}], ",", 
      RowBox[{"U33", "@@", "\[Chi]"}]}], "}"}]}], ";"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186340635476046`*^9, 3.718634064767624*^9}, 
    3.719742025605444*^9, 3.719747690314947*^9},
  FontFamily->"Consolas",
@@ -7172,6 +7386,7 @@ Cell[TextData[{
      SubscriptBox["X", "j"]}]], TraditionalForm]]],
  "?\n"
 }], "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718634506038701*^9, 3.71863467005372*^9}, 
    3.720542645332335*^9},
  FontFamily->"Consolas",
@@ -7258,6 +7473,7 @@ Cell[BoxData[
         RowBox[{"\[PartialD]", 
          SubscriptBox["X", "j"]}]],
        TraditionalForm]}]}]}]}]}]], "Code",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.720542636327313*^9, 3.720542659338221*^9}}],
 
 Cell[BoxData[{
@@ -7633,6 +7849,8 @@ Cell[BoxData[{
       SubscriptBox[
        OverscriptBox["X", "\[RightVector]"], "r"], "]"}]}]}]}], 
   ";"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  FontFamily->"Consolas",
  FontWeight->"Regular",
  CellTags->"PostProcessingSubroutines"]
@@ -7674,6 +7892,7 @@ Cell[TextData[{
      RowBox[{" ", "k"}]], " "}], TraditionalForm]],
   FontColor->RGBColor[0.5450980392156862, 0., 0.]]
 }], "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186355323674464`*^9, 3.718635677081423*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -7971,6 +8190,7 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{"\[Rho]", ",", "\[Zeta]"}], "}"}], "]"}]}]}], ")"}]}]}], 
       "}"}]}], "}"}]}], ";"}]], "Input",
+ CellOpen->True,
  ShowCellLabel->True,
  CellLabelPositioning->Above,
  CellLabelAutoDelete->True,
@@ -8048,6 +8268,7 @@ Cell[TextData[{
  StyleBox[")",
   FontColor->RGBColor[0.5450980392156862, 0., 0.]]
 }], "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718636046344595*^9, 3.7186361399060316`*^9}, {
   3.718710605224543*^9, 3.7187106325712137`*^9}, {3.7187108444844685`*^9, 
   3.718710855453387*^9}},
@@ -8142,6 +8363,8 @@ Cell[BoxData[{
       RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718636158300064*^9, 3.7186361667401943`*^9}, {
   3.718638794859312*^9, 3.718638851687685*^9}},
  FontFamily->"Consolas",
@@ -8153,6 +8376,7 @@ Cell[CellGroupData[{
 
 Cell[TextData[StyleBox["Compute the total energy",
  FontSize->14]], "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7201927360412526`*^9, 3.72019274042632*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -8233,6 +8457,8 @@ Cell[BoxData[
           SuperscriptBox["\[CapitalOmega]", "h"]}]}], "]"}]}], ",", 
       "\"\<Energy, Method 2 (using postprocessing)\>\""}], "]"}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7196657222938805`*^9, 3.7196658471815577`*^9}, {
    3.7196659103842826`*^9, 3.7196659446468153`*^9}, 3.719665986712715*^9, {
    3.719666066679205*^9, 3.719666116796239*^9}, {3.7196677036105185`*^9, 
@@ -8351,6 +8577,8 @@ Cell[BoxData[
        SubscriptBox["g", 
         RowBox[{"k", "\[CenterDot]", "3", "\[CenterDot]"}]]}]}]}], 
     ";"}]}]}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.719309283765579*^9, 3.719309307690461*^9}, 
    3.720538667116456*^9},
  FontFamily->"Consolas",
@@ -8368,6 +8596,7 @@ Cell[TextData[{
   FontSize->16,
   FontColor->RGBColor[0.6212558175020981, 0.07449454489967193, 0.]]
 }], "Subsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7205419346138687`*^9, 3.7205419485101547`*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -8376,6 +8605,7 @@ Cell[TextData[{
 Cell[CellGroupData[{
 
 Cell["Show Displacement Field", "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718030744308613*^9, 3.7180307546687717`*^9}, {
   3.720541864487702*^9, 3.7205418708075333`*^9}},
  FontFamily->"Consolas",
@@ -8422,6 +8652,8 @@ Cell[BoxData[{
    RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
    RowBox[{"PlotLegends", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7158948833722057`*^9, 3.715894898530559*^9}, {
    3.715895353531015*^9, 3.715895370337266*^9}, {3.717453687522571*^9, 
    3.717453695945539*^9}, 3.718011090888625*^9, {3.718926099598515*^9, 
@@ -8433,6 +8665,7 @@ Cell[BoxData[{
 Cell[CellGroupData[{
 
 Cell["Verify boundary conditions", "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718030744308613*^9, 3.7180307546687717`*^9}},
  FontFamily->"Consolas",
  FontSize->13,
@@ -8469,6 +8702,8 @@ Cell[BoxData[
      "\"\<\!\(\*SuperscriptBox[\(u\), \(\[Phi]\)]\)\>\"", ",", 
       "\"\<\!\(\*SuperscriptBox[\(u\), \(\[Zeta]\)]\)\>\""}], "}"}]}]}], 
   "]"}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718030601111413*^9, 3.7180307384447727`*^9}, {
   3.718030811118389*^9, 3.718030813413424*^9}, {3.718545484044195*^9, 
   3.718545505092018*^9}, {3.718979439287365*^9, 3.7189794658077726`*^9}, {
@@ -8480,6 +8715,7 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell["Traction free boundary checks", "Subsubsection",
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7180131085330276`*^9, 3.7180131170535145`*^9}, {
   3.718636183689204*^9, 3.718636184370465*^9}},
  FontFamily->"Consolas",
@@ -8544,6 +8780,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Rho]\), \
 \(\[Rho]\)]\)\!\(\*SubscriptBox[\(|\), \(\[Zeta] = 9\)]\)\>\""}], "}"}]}]}], 
   "]"}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186362205510206`*^9, 3.718636306761095*^9}, {
    3.719072183851759*^9, 3.719072232959267*^9}, {3.7190728418011875`*^9, 
    3.7190728466647635`*^9}, {3.7190730293533397`*^9, 
@@ -8610,6 +8848,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Phi]\), \
 \(\[Rho]\)]\)\!\(\*SubscriptBox[\(|\), \(\[Zeta] = 9\)]\)\>\""}], "}"}]}]}], 
   "]"}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718639304222136*^9, 3.718639324331195*^9}, {
    3.7187239651085806`*^9, 3.7187240024279037`*^9}, {3.7190722412321463`*^9, 
    3.719072256407881*^9}, {3.7190730647691374`*^9, 3.719073112921132*^9}, {
@@ -8676,6 +8916,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Zeta]\), \(\[Rho]\)]\)\!\
 \(\*SubscriptBox[\(|\), \(\[Zeta] = 9\)]\)\>\""}], "}"}]}]}], "]"}]], "Input",\
 
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186363335940065`*^9, 3.718636351778036*^9}, {
   3.7190724408967357`*^9, 3.719072446575573*^9}, {3.7190731760731087`*^9, 
   3.7190732030717773`*^9}, {3.719075078546619*^9, 3.7190750935306005`*^9}, {
@@ -8731,6 +8973,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Rho]\), \(\[Zeta]\)]\)\!\
 \(\*SubscriptBox[\(|\), \(\[Rho] = 0.9\)]\)\>\""}], "}"}]}]}], "]"}]], "Input",\
 
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.718639374540716*^9, 3.7186394306765785`*^9}, 
    3.7187128288906927`*^9, {3.719072449761623*^9, 3.719072457087737*^9}, {
    3.7190732104418907`*^9, 3.7190732143294506`*^9}, {3.719073248752982*^9, 
@@ -8785,6 +9029,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Phi]\), \(\[Zeta]\)]\)\!\
 \(\*SubscriptBox[\(|\), \(\[Rho] = 0.9\)]\)\>\""}], "}"}]}]}], "]"}]], "Input",\
 
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{{3.7186394153788433`*^9, 3.718639441402993*^9}, 
    3.7187128405208716`*^9, {3.7190724633758345`*^9, 3.7190724716484613`*^9}, {
    3.7190732180407577`*^9, 3.71907322209682*^9}, {3.7190732617856817`*^9, 
@@ -8839,6 +9085,8 @@ Cell[BoxData[
       "\"\<\!\(\*SubsuperscriptBox[\(\[Sigma]\), \(\[Zeta]\), \
 \(\[Zeta]\)]\)\!\(\*SubscriptBox[\(|\), \(\[Rho] = 0.9\)]\)\>\""}], "}"}]}]}],
    "]"}]], "Input",
+ CellOpen->True,
+ ShowCellLabel->True,
  CellChangeTimes->{
   3.718712844377181*^9, {3.7190724754722705`*^9, 3.719072480839853*^9}, {
    3.719073224673109*^9, 3.7190732297769375`*^9}, {3.7190732759059014`*^9, 
@@ -8850,10 +9098,10 @@ Cell[BoxData[
  CellTags->"PostProcessingSubroutines"]
 }, Closed]]
 }, Closed]]
-}, Closed]]
+}, Open  ]]
 },
 CellGrouping->Manual,
-WindowSize->{1195, 855},
+WindowSize->{698, 855},
 WindowMargins->{{7, Automatic}, {Automatic, 0}},
 ShowGroupOpener->True,
 ShowCellLabel->False,
@@ -8865,9 +9113,7 @@ StyleDefinitions->Notebook[{
    Cell[
     StyleData["Subsubsection"], FontFamily -> "Consolas", FontWeight -> 
     "Regular", FontColor -> RGBColor[0.545098, 0, 0], Background -> 
-    GrayLevel[0.8]]}, WindowSize -> {808, 730}, 
-  WindowMargins -> {{12, Automatic}, {Automatic, 24}}, Visible -> False, 
-  FrontEndVersion -> 
+    GrayLevel[0.8]]}, Visible -> False, FrontEndVersion -> 
   "11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, 2016)", 
   StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
 ]
@@ -8876,380 +9122,501 @@ StyleDefinitions->Notebook[{
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "ChristoffelSymbols"->{
-  Cell[75212, 1972, 3446, 93, 146, "Input",
-   CellTags->{"ChristoffelSymbols", "CurvilinearTheoreticalQuantities"}]},
- "CurvilinearTheoreticalQuantities"->{
-  Cell[75212, 1972, 3446, 93, 146, "Input",
-   CellTags->{"ChristoffelSymbols", "CurvilinearTheoreticalQuantities"}],
-  Cell[78661, 2067, 4449, 109, 179, "Input",
-   CellTags->"CurvilinearTheoreticalQuantities"],
-  Cell[83113, 2178, 8375, 210, 375, "Input",
-   CellTags->"CurvilinearTheoreticalQuantities"],
-  Cell[91491, 2390, 5651, 152, 248, "Input",
-   CellTags->"CurvilinearTheoreticalQuantities"],
-  Cell[97145, 2544, 2056, 52, 123, "Input",
-   CellTags->"CurvilinearTheoreticalQuantities"],
-  Cell[99204, 2598, 2180, 54, 116, "Input",
-   CellTags->"CurvilinearTheoreticalQuantities"]},
- "GeometryMeshDataStructures"->{
-  Cell[245223, 6046, 9893, 175, 211, "Input",
-   CellTags->"GeometryMeshDataStructures"],
-  Cell[255119, 6223, 6947, 188, 287, "Input",
-   CellTags->"GeometryMeshDataStructures"],
-  Cell[262069, 6413, 3050, 74, 128, "Input",
-   CellTags->"GeometryMeshDataStructures"]},
+ "PrimitiveInitialization"->{
+  Cell[422, 15, 2389, 52, 250, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[2814, 69, 497, 15, 40, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[3345, 89, 2220, 59, 348, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[5568, 150, 478, 14, 40, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[6049, 166, 473, 14, 40, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[6559, 185, 1098, 27, 97, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[7660, 214, 331, 8, 43, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[8025, 227, 837, 21, 114, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[8865, 250, 359, 9, 43, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[9258, 264, 626, 17, 80, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[9887, 283, 333, 8, 43, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[10254, 296, 736, 21, 114, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[10993, 319, 369, 9, 43, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[11396, 333, 619, 17, 80, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[12018, 352, 328, 8, 43, "Output",
+   CellTags->"PrimitiveInitialization"],
+  Cell[12380, 365, 685, 19, 97, "Input",
+   CellOpen->True,
+   CellTags->"PrimitiveInitialization"],
+  Cell[13068, 386, 349, 9, 43, "Output",
+   CellTags->"PrimitiveInitialization"]},
  "InitializationCell"->{
-  Cell[9403, 283, 4335, 84, 198, "Input",
+  Cell[14016, 418, 4448, 87, 233, "Input",
+   CellOpen->True,
    CellTags->{"InitializationCell", "In[545]:="}],
-  Cell[13741, 369, 140, 2, 24, "Print",
+  Cell[18467, 507, 164, 2, 24, "Print",
    CellTags->{"InitializationCell", "In[545]:="}],
-  Cell[13915, 376, 23084, 551, 1520, "Input",
+  Cell[18665, 514, 23118, 551, 1772, "Input",
+   CellOpen->True,
    CellTags->"InitializationCell"],
-  Cell[37002, 929, 130, 2, 24, "Print",
+  Cell[41786, 1067, 151, 2, 24, "Print",
    CellTags->"InitializationCell"],
-  Cell[37166, 936, 15787, 371, 19, "Input",
-   CellOpen->False,
+  Cell[41971, 1074, 15808, 372, 810, "Input",
+   CellOpen->True,
    CellTags->"InitializationCell"],
-  Cell[52956, 1309, 132, 2, 24, "Print",
+  Cell[57782, 1448, 159, 2, 24, "Print",
    CellTags->"InitializationCell"],
-  Cell[53122, 1316, 21598, 636, 1339, "Input",
+  Cell[57975, 1455, 21637, 638, 1548, "Input",
+   CellOpen->True,
    CellTags->"InitializationCell"],
-  Cell[74723, 1954, 129, 2, 24, "Print",
+  Cell[79615, 2095, 153, 2, 24, "Print",
    CellTags->"InitializationCell"]},
  "In[545]:="->{
-  Cell[9403, 283, 4335, 84, 198, "Input",
+  Cell[14016, 418, 4448, 87, 233, "Input",
+   CellOpen->True,
    CellTags->{"InitializationCell", "In[545]:="}],
-  Cell[13741, 369, 140, 2, 24, "Print",
+  Cell[18467, 507, 164, 2, 24, "Print",
    CellTags->{"InitializationCell", "In[545]:="}]},
+ "ChristoffelSymbols"->{
+  Cell[80150, 2114, 3485, 95, 180, "Input",
+   CellOpen->True,
+   CellTags->{"ChristoffelSymbols", "CurvilinearTheoreticalQuantities"}]},
+ "CurvilinearTheoreticalQuantities"->{
+  Cell[80150, 2114, 3485, 95, 180, "Input",
+   CellOpen->True,
+   CellTags->{"ChristoffelSymbols", "CurvilinearTheoreticalQuantities"}],
+  Cell[83638, 2211, 4488, 111, 212, "Input",
+   CellOpen->True,
+   CellTags->"CurvilinearTheoreticalQuantities"],
+  Cell[88129, 2324, 8414, 212, 449, "Input",
+   CellOpen->True,
+   CellTags->"CurvilinearTheoreticalQuantities"],
+  Cell[96546, 2538, 5690, 154, 298, "Input",
+   CellOpen->True,
+   CellTags->"CurvilinearTheoreticalQuantities"],
+  Cell[102239, 2694, 2095, 54, 155, "Input",
+   CellOpen->True,
+   CellTags->"CurvilinearTheoreticalQuantities"],
+  Cell[104337, 2750, 2219, 56, 136, "Input",
+   CellOpen->True,
+   CellTags->"CurvilinearTheoreticalQuantities"]},
  "NumericalSubroutines"->{
-  Cell[125760, 3358, 4384, 98, 211, "Input",
+  Cell[131193, 3525, 4423, 100, 275, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"],
-  Cell[130147, 3458, 3040, 79, 237, "Input",
+  Cell[135619, 3627, 3079, 81, 320, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"],
-  Cell[133190, 3539, 14957, 366, 475, "Input",
+  Cell[138701, 3710, 14996, 368, 666, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"],
-  Cell[148150, 3907, 4232, 92, 173, "Input",
+  Cell[153700, 4080, 4271, 94, 259, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"],
-  Cell[152385, 4001, 13940, 331, 447, "Input",
+  Cell[157974, 4176, 13979, 333, 593, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10001.},
    CellTags->"NumericalSubroutines"],
-  Cell[166328, 4334, 20695, 482, 499, "Input",
+  Cell[171956, 4511, 20734, 484, 772, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10000.},
    CellTags->"NumericalSubroutines"],
-  Cell[187026, 4818, 3939, 93, 222, "Input",
+  Cell[192693, 4997, 3978, 95, 300, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10000.},
    CellTags->"NumericalSubroutines"],
-  Cell[190968, 4913, 14899, 284, 487, "Input",
+  Cell[196674, 5094, 14938, 286, 636, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10000.},
    CellTags->"NumericalSubroutines"],
-  Cell[205870, 5199, 10193, 199, 371, "Input",
+  Cell[211615, 5382, 10232, 201, 493, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10000.},
    CellTags->"NumericalSubroutines"],
-  Cell[216066, 5400, 8224, 151, 270, "Input",
+  Cell[221850, 5585, 8263, 153, 347, "Input",
+   CellOpen->True,
    CellGroupingRules->{"GroupTogetherGrouping", 10000.},
    CellTags->"NumericalSubroutines"],
-  Cell[224293, 5553, 7184, 159, 403, "Input",
+  Cell[230116, 5740, 7223, 161, 520, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"],
-  Cell[231480, 5714, 13196, 315, 645, "Input",
+  Cell[237342, 5903, 13235, 317, 848, "Input",
+   CellOpen->True,
    CellTags->"NumericalSubroutines"]},
- "PostProcessingSubroutines"->{
-  Cell[271282, 6664, 3583, 95, 259, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[274868, 6761, 1484, 42, 103, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[276389, 6808, 226, 5, 36, "Subsubsection",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[276618, 6815, 6874, 200, 203, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[283495, 7017, 211, 5, 28, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[283709, 7024, 4212, 125, 137, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[287958, 7154, 654, 25, 71, "Subsubsection",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[290495, 7262, 12881, 375, 250, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[303413, 7642, 1223, 40, 53, "Subsubsection",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[304639, 7684, 11764, 295, 167, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[318734, 8058, 3118, 90, 152, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[325612, 8248, 3751, 109, 345, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[333687, 8488, 3128, 72, 63, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[336818, 8562, 2914, 64, 63, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[339735, 8628, 2536, 59, 63, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[342274, 8689, 2247, 52, 66, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[344524, 8743, 2250, 52, 69, "Input",
-   CellTags->"PostProcessingSubroutines"],
-  Cell[346777, 8797, 2202, 52, 69, "Input",
-   CellTags->"PostProcessingSubroutines"]},
- "PrimitiveInitialization"->{
-  Cell[422, 15, 1288, 29, 114, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[1713, 46, 524, 15, 34, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[2271, 66, 1059, 25, 97, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[3333, 93, 333, 8, 43, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[3700, 106, 798, 19, 97, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[4501, 127, 359, 9, 43, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[4894, 141, 587, 15, 80, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[5484, 158, 333, 8, 43, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[5851, 171, 697, 19, 97, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[6551, 192, 371, 9, 43, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[6956, 206, 580, 15, 80, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[7539, 223, 326, 8, 43, "Output",
-   CellTags->"PrimitiveInitialization"],
-  Cell[7899, 236, 646, 17, 80, "Input",
-   CellTags->"PrimitiveInitialization"],
-  Cell[8548, 255, 351, 9, 43, "Output",
-   CellTags->"PrimitiveInitialization"]},
+ "GeometryMeshDataStructures"->{
+  Cell[251146, 6238, 9932, 177, 211, "Input",
+   CellOpen->True,
+   CellTags->"GeometryMeshDataStructures"],
+  Cell[261081, 6417, 6986, 190, 287, "Input",
+   CellOpen->True,
+   CellTags->"GeometryMeshDataStructures"],
+  Cell[268070, 6609, 3089, 76, 128, "Input",
+   CellOpen->True,
+   CellTags->"GeometryMeshDataStructures"]},
  "SolveSubroutines"->{
-  Cell[265628, 6504, 4573, 120, 261, "Input",
-   CellTags->"SolveSubroutines"]}
+  Cell[271690, 6703, 4612, 122, 261, "Input",
+   CellOpen->True,
+   CellTags->"SolveSubroutines"]},
+ "PostProcessingSubroutines"->{
+  Cell[277427, 6867, 3622, 97, 259, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[281052, 6966, 1523, 44, 103, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[282612, 7015, 248, 6, 36, "Subsubsection",
+   CellTags->"PostProcessingSubroutines"],
+  Cell[282863, 7023, 6913, 202, 203, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[289779, 7227, 250, 7, 28, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[290032, 7236, 4251, 127, 137, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[294320, 7368, 676, 26, 71, "Subsubsection",
+   CellTags->"PostProcessingSubroutines"],
+  Cell[296901, 7478, 12920, 377, 250, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[309858, 7860, 1245, 41, 53, "Subsubsection",
+   CellTags->"PostProcessingSubroutines"],
+  Cell[311106, 7903, 11781, 296, 167, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[325240, 8279, 3157, 92, 152, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[332218, 8474, 3790, 111, 345, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[340498, 8724, 3167, 74, 63, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[343668, 8800, 2953, 66, 63, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[346624, 8868, 2575, 61, 63, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[349202, 8931, 2286, 54, 66, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[351491, 8987, 2289, 54, 69, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"],
+  Cell[353783, 9043, 2241, 54, 69, "Input",
+   CellOpen->True,
+   CellTags->"PostProcessingSubroutines"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ChristoffelSymbols", 349877, 8878},
- {"CurvilinearTheoreticalQuantities", 350035, 8881},
- {"GeometryMeshDataStructures", 350660, 8894},
- {"InitializationCell", 350955, 8901},
- {"In[545]:=", 351651, 8919},
- {"NumericalSubroutines", 351863, 8924},
- {"PostProcessingSubroutines", 353248, 8955},
- {"PrimitiveInitialization", 354879, 8992},
- {"SolveSubroutines", 356036, 9021}
+ {"PrimitiveInitialization", 356841, 9124},
+ {"InitializationCell", 358408, 9167},
+ {"In[545]:=", 359164, 9188},
+ {"ChristoffelSymbols", 359394, 9194},
+ {"CurvilinearTheoreticalQuantities", 359571, 9198},
+ {"NumericalSubroutines", 360306, 9217},
+ {"GeometryMeshDataStructures", 361921, 9260},
+ {"SolveSubroutines", 362271, 9270},
+ {"PostProcessingSubroutines", 362403, 9274}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[422, 15, 1288, 29, 114, "Input",
+Cell[422, 15, 2389, 52, 250, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[1713, 46, 524, 15, 34, "Output",
+Cell[2814, 69, 497, 15, 40, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[2271, 66, 1059, 25, 97, "Input",
+Cell[3345, 89, 2220, 59, 348, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[3333, 93, 333, 8, 43, "Output",
+Cell[5568, 150, 478, 14, 40, "Output",
+ CellTags->"PrimitiveInitialization"],
+Cell[6049, 166, 473, 14, 40, "Output",
+ CellTags->"PrimitiveInitialization"]
+}, {2, 3}]],
+Cell[CellGroupData[{
+Cell[6559, 185, 1098, 27, 97, "Input",
+ CellOpen->True,
+ CellTags->"PrimitiveInitialization"],
+Cell[7660, 214, 331, 8, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[3700, 106, 798, 19, 97, "Input",
+Cell[8025, 227, 837, 21, 114, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[4501, 127, 359, 9, 43, "Output",
+Cell[8865, 250, 359, 9, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[4894, 141, 587, 15, 80, "Input",
+Cell[9258, 264, 626, 17, 80, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[5484, 158, 333, 8, 43, "Output",
+Cell[9887, 283, 333, 8, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[5851, 171, 697, 19, 97, "Input",
+Cell[10254, 296, 736, 21, 114, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[6551, 192, 371, 9, 43, "Output",
+Cell[10993, 319, 369, 9, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[6956, 206, 580, 15, 80, "Input",
+Cell[11396, 333, 619, 17, 80, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[7539, 223, 326, 8, 43, "Output",
+Cell[12018, 352, 328, 8, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[7899, 236, 646, 17, 80, "Input",
+Cell[12380, 365, 685, 19, 97, "Input",
+ CellOpen->True,
  CellTags->"PrimitiveInitialization"],
-Cell[8548, 255, 351, 9, 43, "Output",
+Cell[13068, 386, 349, 9, 43, "Output",
  CellTags->"PrimitiveInitialization"]
 }, {2}]],
+Cell[13429, 398, 70, 1, 32, "Input"],
 Cell[CellGroupData[{
-Cell[8933, 269, 445, 10, 50, "Section"],
+Cell[13524, 403, 467, 11, 50, "Section"],
 Cell[CellGroupData[{
-Cell[9403, 283, 4335, 84, 198, "Input",
+Cell[14016, 418, 4448, 87, 233, "Input",
+ CellOpen->True,
  CellTags->{"InitializationCell", "In[545]:="}],
-Cell[13741, 369, 140, 2, 24, "Print",
+Cell[18467, 507, 164, 2, 24, "Print",
  CellTags->{"InitializationCell", "In[545]:="}]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[13915, 376, 23084, 551, 1520, "Input",
+Cell[18665, 514, 23118, 551, 1772, "Input",
+ CellOpen->True,
  CellTags->"InitializationCell"],
-Cell[37002, 929, 130, 2, 24, "Print",
+Cell[41786, 1067, 151, 2, 24, "Print",
  CellTags->"InitializationCell"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[37166, 936, 15787, 371, 19, "Input",
- CellOpen->False,
+Cell[41971, 1074, 15808, 372, 810, "Input",
+ CellOpen->True,
  CellTags->"InitializationCell"],
-Cell[52956, 1309, 132, 2, 24, "Print",
+Cell[57782, 1448, 159, 2, 24, "Print",
  CellTags->"InitializationCell"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[53122, 1316, 21598, 636, 1339, "Input",
+Cell[57975, 1455, 21637, 638, 1548, "Input",
+ CellOpen->True,
  CellTags->"InitializationCell"],
-Cell[74723, 1954, 129, 2, 24, "Print",
+Cell[79615, 2095, 153, 2, 24, "Print",
  CellTags->"InitializationCell"]
 }, {2}]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[74898, 1962, 311, 8, 34, "Section"],
-Cell[75212, 1972, 3446, 93, 146, "Input",
+Cell[79814, 2103, 333, 9, 48, "Section"],
+Cell[80150, 2114, 3485, 95, 180, "Input",
+ CellOpen->True,
  CellTags->{"ChristoffelSymbols", "CurvilinearTheoreticalQuantities"}],
-Cell[78661, 2067, 4449, 109, 179, "Input",
+Cell[83638, 2211, 4488, 111, 212, "Input",
+ CellOpen->True,
  CellTags->"CurvilinearTheoreticalQuantities"],
-Cell[83113, 2178, 8375, 210, 375, "Input",
+Cell[88129, 2324, 8414, 212, 449, "Input",
+ CellOpen->True,
  CellTags->"CurvilinearTheoreticalQuantities"],
-Cell[91491, 2390, 5651, 152, 248, "Input",
+Cell[96546, 2538, 5690, 154, 298, "Input",
+ CellOpen->True,
  CellTags->"CurvilinearTheoreticalQuantities"],
-Cell[97145, 2544, 2056, 52, 123, "Input",
+Cell[102239, 2694, 2095, 54, 155, "Input",
+ CellOpen->True,
  CellTags->"CurvilinearTheoreticalQuantities"],
-Cell[99204, 2598, 2180, 54, 116, "Input",
+Cell[104337, 2750, 2219, 56, 136, "Input",
+ CellOpen->True,
  CellTags->"CurvilinearTheoreticalQuantities"],
-Cell[101387, 2654, 1116, 26, 60, "Input"],
-Cell[102506, 2682, 5012, 148, 195, "Input"],
-Cell[107521, 2832, 2265, 62, 95, "Input"],
-Cell[109789, 2896, 176, 4, 25, "Text"],
-Cell[109968, 2902, 7696, 209, 130, "Input"],
-Cell[117667, 3113, 7050, 202, 117, "Input"]
+Cell[106559, 2808, 1155, 28, 70, "Input",
+ CellOpen->True],
+Cell[107717, 2838, 5051, 150, 225, "Input",
+ CellOpen->True],
+Cell[112771, 2990, 2304, 64, 19, "Input",
+ CellOpen->True],
+Cell[115078, 3056, 198, 5, 28, "Text"],
+Cell[115279, 3063, 7735, 211, 19, "Input",
+ CellOpen->True],
+Cell[123017, 3276, 7089, 204, 19, "Input",
+ CellOpen->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[124754, 3320, 548, 18, 34, "Section"],
+Cell[130143, 3485, 570, 19, 34, "Section"],
 Cell[CellGroupData[{
-Cell[125327, 3342, 430, 14, 53, "Subsection"],
-Cell[125760, 3358, 4384, 98, 211, "Input",
+Cell[130738, 3508, 452, 15, 53, "Subsection"],
+Cell[131193, 3525, 4423, 100, 275, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"],
-Cell[130147, 3458, 3040, 79, 237, "Input",
+Cell[135619, 3627, 3079, 81, 320, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"],
-Cell[133190, 3539, 14957, 366, 475, "Input",
+Cell[138701, 3710, 14996, 368, 666, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"],
-Cell[148150, 3907, 4232, 92, 173, "Input",
+Cell[153700, 4080, 4271, 94, 259, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"],
-Cell[152385, 4001, 13940, 331, 447, "Input",
+Cell[157974, 4176, 13979, 333, 593, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
  CellTags->"NumericalSubroutines"],
-Cell[166328, 4334, 20695, 482, 499, "Input",
+Cell[171956, 4511, 20734, 484, 772, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellTags->"NumericalSubroutines"],
-Cell[187026, 4818, 3939, 93, 222, "Input",
+Cell[192693, 4997, 3978, 95, 300, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellTags->"NumericalSubroutines"],
-Cell[190968, 4913, 14899, 284, 487, "Input",
+Cell[196674, 5094, 14938, 286, 636, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellTags->"NumericalSubroutines"],
-Cell[205870, 5199, 10193, 199, 371, "Input",
+Cell[211615, 5382, 10232, 201, 493, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellTags->"NumericalSubroutines"],
-Cell[216066, 5400, 8224, 151, 270, "Input",
+Cell[221850, 5585, 8263, 153, 347, "Input",
+ CellOpen->True,
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellTags->"NumericalSubroutines"],
-Cell[224293, 5553, 7184, 159, 403, "Input",
+Cell[230116, 5740, 7223, 161, 520, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"],
-Cell[231480, 5714, 13196, 315, 645, "Input",
+Cell[237342, 5903, 13235, 317, 848, "Input",
+ CellOpen->True,
  CellTags->"NumericalSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[244713, 6034, 507, 10, 43, "Subsection"],
-Cell[245223, 6046, 9893, 175, 211, "Input",
+Cell[250614, 6225, 529, 11, 43, "Subsection"],
+Cell[251146, 6238, 9932, 177, 211, "Input",
+ CellOpen->True,
  CellTags->"GeometryMeshDataStructures"],
-Cell[255119, 6223, 6947, 188, 287, "Input",
+Cell[261081, 6417, 6986, 190, 287, "Input",
+ CellOpen->True,
  CellTags->"GeometryMeshDataStructures"],
-Cell[262069, 6413, 3050, 74, 128, "Input",
+Cell[268070, 6609, 3089, 76, 128, "Input",
+ CellOpen->True,
  CellTags->"GeometryMeshDataStructures"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[265156, 6492, 469, 10, 43, "Subsection"],
-Cell[265628, 6504, 4573, 120, 261, "Input",
+Cell[271196, 6690, 491, 11, 43, "Subsection"],
+Cell[271690, 6703, 4612, 122, 261, "Input",
+ CellOpen->True,
  CellTags->"SolveSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[270238, 6629, 482, 10, 47, "Subsection"],
+Cell[276339, 6830, 504, 11, 47, "Subsection"],
 Cell[CellGroupData[{
-Cell[270745, 6643, 534, 19, 45, "Subsubsection"],
-Cell[271282, 6664, 3583, 95, 259, "Input",
+Cell[276868, 6845, 556, 20, 45, "Subsubsection"],
+Cell[277427, 6867, 3622, 97, 259, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"],
-Cell[274868, 6761, 1484, 42, 103, "Input",
+Cell[281052, 6966, 1523, 44, 103, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[276389, 6808, 226, 5, 36, "Subsubsection",
+Cell[282612, 7015, 248, 6, 36, "Subsubsection",
  CellTags->"PostProcessingSubroutines"],
-Cell[276618, 6815, 6874, 200, 203, "Input",
+Cell[282863, 7023, 6913, 202, 203, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"],
-Cell[283495, 7017, 211, 5, 28, "Input",
+Cell[289779, 7227, 250, 7, 28, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"],
-Cell[283709, 7024, 4212, 125, 137, "Input",
+Cell[290032, 7236, 4251, 127, 137, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[287958, 7154, 654, 25, 71, "Subsubsection",
+Cell[294320, 7368, 676, 26, 71, "Subsubsection",
  CellTags->"PostProcessingSubroutines"],
-Cell[288615, 7181, 1877, 79, 118, "Code"],
-Cell[290495, 7262, 12881, 375, 250, "Input",
+Cell[294999, 7396, 1899, 80, 118, "Code"],
+Cell[296901, 7478, 12920, 377, 250, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[303413, 7642, 1223, 40, 53, "Subsubsection",
+Cell[309858, 7860, 1245, 41, 53, "Subsubsection",
  CellTags->"PostProcessingSubroutines"],
-Cell[304639, 7684, 11764, 295, 167, "Input",
+Cell[311106, 7903, 11781, 296, 167, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[316440, 7984, 2291, 72, 70, "Subsubsection"],
-Cell[318734, 8058, 3118, 90, 152, "Input",
+Cell[322924, 8204, 2313, 73, 70, "Subsubsection"],
+Cell[325240, 8279, 3157, 92, 152, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[321889, 8153, 245, 6, 37, "Subsubsection"],
-Cell[322137, 8161, 3472, 85, 197, "Input"],
-Cell[325612, 8248, 3751, 109, 345, "Input",
- CellTags->"PostProcessingSubroutines"]
-}, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[329412, 8363, 316, 10, 44, "Subsection"],
-Cell[CellGroupData[{
-Cell[329753, 8377, 231, 5, 26, "Subsubsection"],
-Cell[329987, 8384, 1913, 45, 77, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[331937, 8434, 183, 4, 19, "Subsubsection"],
-Cell[332123, 8440, 1287, 36, 31, "Input"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[333447, 8481, 237, 5, 19, "Subsubsection"],
-Cell[333687, 8488, 3128, 72, 63, "Input",
- CellTags->"PostProcessingSubroutines"],
-Cell[336818, 8562, 2914, 64, 63, "Input",
- CellTags->"PostProcessingSubroutines"],
-Cell[339735, 8628, 2536, 59, 63, "Input",
- CellTags->"PostProcessingSubroutines"],
-Cell[342274, 8689, 2247, 52, 66, "Input",
- CellTags->"PostProcessingSubroutines"],
-Cell[344524, 8743, 2250, 52, 69, "Input",
- CellTags->"PostProcessingSubroutines"],
-Cell[346777, 8797, 2202, 52, 69, "Input",
+Cell[328434, 8376, 267, 7, 37, "Subsubsection"],
+Cell[328704, 8385, 3511, 87, 197, "Input",
+ CellOpen->True],
+Cell[332218, 8474, 3790, 111, 345, "Input",
+ CellOpen->True,
  CellTags->"PostProcessingSubroutines"]
 }, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[336057, 8591, 338, 11, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[336420, 8606, 253, 6, 42, "Subsubsection"],
+Cell[336676, 8614, 1952, 47, 77, "Input",
+ CellOpen->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[338665, 8666, 205, 5, 36, "Subsubsection"],
+Cell[338873, 8673, 1326, 38, 31, "Input",
+ CellOpen->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[340236, 8716, 259, 6, 36, "Subsubsection"],
+Cell[340498, 8724, 3167, 74, 63, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"],
+Cell[343668, 8800, 2953, 66, 63, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"],
+Cell[346624, 8868, 2575, 61, 63, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"],
+Cell[349202, 8931, 2286, 54, 66, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"],
+Cell[351491, 8987, 2289, 54, 69, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"],
+Cell[353783, 9043, 2241, 54, 69, "Input",
+ CellOpen->True,
+ CellTags->"PostProcessingSubroutines"]
 }, Closed]]
 }, Closed]]
+}, Open  ]]
 }
 ]
 *)
